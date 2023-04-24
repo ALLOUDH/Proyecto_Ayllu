@@ -1,31 +1,31 @@
 <resources>
     <string name="app_name">Project_Ayllu</string>
     <string-array name="Carreras_Profesionales">
-    <item>Administración</item>
-    <item>Administración y Finanzas</item>
-    <item>Administración y Marketing</item>
-    <item>Administración y Negocios Internacionales</item>
-    <item>Administración y Recursos Humanos</item>
-    <item>Arquitectura</item>
-    <item>Ciencias y Tecnologías de la Comunicación</item>
-    <item>Contabilidad</item>
-    <item>Derecho</item>
-    <item>Economía</item>
-    <item>Enfermería</item>
-    <item>Ingeniería Ambiental</item>
-    <item>Ingeniería Civil</item>
-    <item>Ingeniería de Minas</item>
-    <item>Ingeniería de Sistemas e Informáticas</item>
-    <item>Ingeniería Eléctrica</item>
-    <item>Ingeniería Electrónica</item>
-    <item>Ingeniería Empresarial</item>
-    <item>Ingeniería Industrial</item>
-    <item>Ingeniería Mecánica</item>
-    <item>Ingeniería Mecatrónica</item>
-    <item>Medicina Humana</item>
-    <item>Odontología</item>
-    <item>Psicología</item>
-    <item>Tecnología Médica - Terapia Fisica y Rehabilitación</item>
-    <item>Tecnología Médica - Laboratorio Clínico y Anatomía Patológica</item>
+        <item>Administración</item>
+        <item>Administración y Finanzas</item>
+        <item>Administración y Marketing</item>
+        <item>Administración y Negocios Internacionales</item>
+        <item>Administración y Recursos Humanos</item>
+        <item>Arquitectura</item>
+        <item>Ciencias y Tecnologías de la Comunicación</item>
+        <item>Contabilidad</item>
+        <item>Derecho</item>
+        <item>Economía</item>
+        <item>Enfermería</item>
+        <item>Ingeniería Ambiental</item>
+        <item>Ingeniería Civil</item>
+        <item>Ingeniería de Minas</item>
+        <item>Ingeniería de Sistemas e Informáticas</item>
+        <item>Ingeniería Eléctrica</item>
+        <item>Ingeniería Electrónica</item>
+        <item>Ingeniería Empresarial</item>
+        <item>Ingeniería Industrial</item>
+        <item>Ingeniería Mecánica</item>
+        <item>Ingeniería Mecatrónica</item>
+        <item>Medicina Humana</item>
+        <item>Odontología</item>
+        <item>Psicología</item>
+        <item>Tecnología Médica - Terapia Fisica y Rehabilitación</item>
+        <item>Tecnología Médica - Laboratorio Clínico y Anatomía Patológica</item>
     </string-array>
 </resources>
