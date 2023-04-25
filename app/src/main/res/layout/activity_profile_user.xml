@@ -33,36 +33,14 @@
                     app:srcCompat="@drawable/top_background" />
 
                 <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="118dp"
-                    android:layout_height="114dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.32999998"
-                    app:srcCompat="@drawable/circle" />
-
-                <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="@drawable/logo_ayllu"
-                    tools:layout_editor_absoluteX="1dp"
-                    tools:layout_editor_absoluteY="10dp"
-                    app:srcCompat="@drawable/logo_ayllu"
-                    />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Perfil"
-                    android:textColor="#ffffff"
-                    android:textSize="21sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteX="51dp"
-                    tools:layout_editor_absoluteY="15dp" />
+                    tools:layout_editor_absoluteY="-20dp" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -99,9 +77,11 @@
                         android:id="@+id/imageView13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_6"
-                        tools:layout_editor_absoluteX="368dp"
-                        tools:layout_editor_absoluteY="2dp" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.764"
+                        app:layout_constraintStart_toEndOf="@+id/imageView11"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_6" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
@@ -156,31 +136,24 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="0dp"
+                    android:textColorHint="@color/white"
+                    android:layout_marginVertical="0dp">
 
-                    android:background="@drawable/banner_background"
-                    android:layout_height="170dp"
-                    android:layout_margin="32dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtReportarProblema"
+                        android:background="@drawable/btn_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:hint="Ingrese su descripcion"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColorHint="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                    <ImageView
-                        android:id="@+id/imageView14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_7"
-                        tools:layout_editor_absoluteX="305dp"
-                        tools:layout_editor_absoluteY="2dp" />
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="300dp"
-                        android:layout_height="90dp"
-                        android:gravity="center"
-                        android:text="Hola soy Alan brito estudio la carrera de ingeniería de sistemas y me gusta poder ayudar con problemas sociales, mi numero de celular es el 985647852, espero conocerte."
-                        android:textColor="@color/white"
-                        tools:layout_editor_absoluteX="23dp"
-                        tools:layout_editor_absoluteY="40dp" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
 

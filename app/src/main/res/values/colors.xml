@@ -16,4 +16,5 @@
         <color name="white_decolorated">#EDEDF7</color>
         <color name="purple_text">#581F5F</color>
         <color name="pink_rectangle">#932B5D</color>
+        <color name="pink_button">#830850</color>
 </resources>

@@ -2,6 +2,7 @@ package ay.llu.project_ayllu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -36,6 +37,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-
+        Intent call_login = new Intent(this, Login.class);
+        startActivity(call_login);
     }
 }

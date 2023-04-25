@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Login extends AppCompatActivity {
+public class Login extends AppCompatActivity implements View.OnClickListener {
         EditText edtName, edtPass;
 
         TextView txtOlvidaste;
@@ -24,25 +24,17 @@ public class Login extends AppCompatActivity {
             edtPass=findViewById(R.id.edtPassword);
             txtOlvidaste=findViewById(R.id.txtOlvidaste);
             btnIniciar=findViewById(R.id.btnIniciar);
+            btnIniciar.setOnClickListener(this);
         }
 
         public void IniciarSesion(View view) {
             String usuario = edtName.getText().toString();
             String password = edtPass.getText().toString();
             boolean verificado = false;
-
-            if (usuario.equals("layoned") && password.equals("123456")) {
-                System.out.println("Bienvenido");
-                mostrarMenu();
-
-            } else {
-                edtPass.setError("contraseña incorrecto");
-                edtName.setError("Nombre de Usuario incorrecto");
-            }
         }
-
-        private void mostrarMenu() {
-            Intent a = new Intent(this, MainActivity.class);
-            startActivity(a);
-        }
+    @Override
+    public void onClick(View view) {
+        Intent call_menu = new Intent(this, profile_user.class);
+        startActivity(call_menu);
+    }
 }
