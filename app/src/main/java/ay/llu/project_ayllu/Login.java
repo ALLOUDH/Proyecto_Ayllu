@@ -41,4 +41,8 @@ public class Login extends AppCompatActivity {
         Intent call_menu = new Intent(this, profile_user.class);
         startActivity(call_menu);
     }
+    public void llamar_recover_pass_login(View view) {
+        Intent call_recover_pass = new Intent(this, RecoverPass.class);
+        startActivity(call_recover_pass);
+    }
 }
