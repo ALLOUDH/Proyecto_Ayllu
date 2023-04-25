@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class Login extends AppCompatActivity {
         EditText edtName, edtPass;
 
         TextView txtOlvidaste;
@@ -24,7 +24,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             edtPass=findViewById(R.id.edtPassword);
             txtOlvidaste=findViewById(R.id.txtOlvidaste);
             btnIniciar=findViewById(R.id.btnIniciar);
-            btnIniciar.setOnClickListener(this);
         }
 
         public void IniciarSesion(View view) {
@@ -32,8 +31,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             String password = edtPass.getText().toString();
             boolean verificado = false;
         }
-    @Override
-    public void onClick(View view) {
+
+    public void llamar_signup_login(View view) {
+        Intent call_sign_up_login = new Intent(this, SignUp.class);
+        startActivity(call_sign_up_login);
+    }
+
+    public void llamar_menu_login(View view) {
         Intent call_menu = new Intent(this, profile_user.class);
         startActivity(call_menu);
     }
