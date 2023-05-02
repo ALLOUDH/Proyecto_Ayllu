@@ -48,24 +48,39 @@
             android:textSize="18dp"
             ></TextView>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:paddingLeft="22dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+
+            android:text="Titulo del problema"
+            android:textColor="@color/purple_text"
+            android:textSize="18dp"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:paddingHorizontal="20dp"
+        android:paddingHorizontal="30dp"
         android:orientation="horizontal">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="0dp"
+            android:layout_height="match_parent"
             android:textColorHint="@color/white"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:hint=""
                 android:background="@color/pink_rectangle"
                 android:textColorHint="@color/white" />
@@ -90,8 +105,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:paddingHorizontal="20dp"
+        android:paddingHorizontal="30dp"
         android:orientation="horizontal">
 
         <com.google.android.material.textfield.TextInputLayout
