@@ -23,7 +23,7 @@ public class RegistrarProblema extends AppCompatActivity {
     Spinner spnCategoria;
     EditText edtTituloRegistrarProblema, edtDescripcionRegistrarProblema;
     Button btnRegistrarProblema; ;
-    ImageButton btnSeleccionarUbicacion, btnAñadirImagenes, btn;
+    ImageButton btnSeleccionarUbicacion, btnAñadirImagenes, btnAñadirVideos;
     private DatabaseReference AylluDatabase;
 
     @Override
@@ -37,6 +37,7 @@ public class RegistrarProblema extends AppCompatActivity {
         btnRegistrarProblema = findViewById(R.id.btnRegistrarProblema);
         btnSeleccionarUbicacion = findViewById(R.id.btnSeleccionarUbicacion);
         btnAñadirImagenes = findViewById(R.id.btnAñadirImagenes);
+        btnAñadirVideos = findViewById(R.id.btnAñadirVideos);
 
         FirebaseApp.initializeApp(this);
         FirebaseDatabase db = FirebaseDatabase.getInstance();
@@ -59,6 +60,14 @@ public class RegistrarProblema extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_PICK);
                 intent.setType("image/*");
+                startActivityForResult(intent,1);
+            }
+        });
+        btnAñadirVideos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("video/*");
                 startActivityForResult(intent,1);
             }
         });
