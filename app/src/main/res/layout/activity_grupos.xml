@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_decolorated"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtv_grupo_titulo_categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="134dp"
+        android:gravity="center"
+        android:text="Inseguridad Ciudadana"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/txtv_grupo_nombre_problema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:gravity="center"
+        android:text="Asalto en el Tambo"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_grupo_titulo_categoria"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:layout_width="367dp"
+        android:layout_height="181dp"
+        android:src="@drawable/logo_ayllu"
+        app:layout_constraintBottom_toTopOf="@+id/txtv_grupo_titulo_categoria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="150dp">
+
+        <TextView
+            android:id="@+id/txt_grupo_user1_name"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:text="User"
+            android:textSize="14sp"
+            android:gravity="center|top"
+            />
+        <ImageView
+            android:id="@+id/imgv_user1"
+            android:layout_marginTop="30dp"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:onClick="ver_perfiluser1"
+            />
+        <TextView
+            android:id="@+id/txtv_grupo_user1_carrera"
+            android:layout_marginTop="110dp"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:text="Ing. Civil"
+            android:textSize="14sp"
+            android:gravity="center|top"/>
+
+        <TextView
+            android:id="@+id/txt_grup_user2_name"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="150dp"
+            android:text="User"
+            android:textSize="14sp"
+            android:gravity="center|top"
+            />
+        <ImageView
+            android:id="@+id/imgv_user2"
+            android:layout_marginTop="30dp"
+            android:layout_width="90dp"
+            android:layout_marginLeft="150dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:onClick="ver_perfiluser2"
+            />
+        <TextView
+            android:id="@+id/txtv_grupo_user2_carrera"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="150dp"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:text="Ing. Mecánica"
+            android:textSize="14sp"
+            android:gravity="center|top"/>
+
+        <TextView
+            android:id="@+id/txt_grup_user3_name"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="300dp"
+            android:text="User"
+            android:textSize="14sp"
+            android:gravity="center|top"
+            />
+        <ImageView
+            android:id="@+id/imgv_user3"
+            android:layout_marginTop="30dp"
+            android:layout_width="90dp"
+            android:layout_marginLeft="300dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:onClick="ver_perfiluser3"
+            />
+        <TextView
+            android:id="@+id/txtv_grupo_user3_carrera"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="300dp"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:text="Ing. Mecánica"
+            android:textSize="14sp"
+            android:gravity="center|top"/>
+        <TextView
+            android:id="@+id/txt_grup_user4_name"
+            android:layout_marginTop="150dp"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:text="User"
+            android:textSize="14sp"
+            android:gravity="center|top"
+            />
+        <ImageView
+            android:id="@+id/imgv_user4"
+            android:layout_marginTop="180dp"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:onClick="ver_perfiluser4"
+            />
+        <TextView
+            android:id="@+id/txtv_grupo_user4_carrera"
+            android:layout_marginTop="259dp"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:text="Ing. Industrial"
+            android:textSize="14sp"
+            android:gravity="center|top"/>
+
+        <TextView
+            android:id="@+id/txt_grup_user5_name"
+            android:layout_marginTop="150dp"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="150dp"
+            android:text="User"
+            android:textSize="14sp"
+            android:gravity="center|top"
+            />
+        <ImageView
+            android:id="@+id/imgv_user5"
+            android:layout_marginTop="180dp"
+            android:layout_width="90dp"
+            android:layout_marginLeft="150dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:onClick="ver_perfiluser5"
+            />
+        <TextView
+            android:id="@+id/txtv_grupo_user5_carrera"
+            android:layout_marginTop="259dp"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="150dp"
+            android:text="Ing. Sistemas"
+            android:textSize="14sp"
+            android:gravity="center|top"/>
+
+        <TextView
+            android:id="@+id/txt_grup_user6_name"
+            android:layout_marginTop="150dp"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="300dp"
+            android:text="User"
+            android:textSize="14sp"
+            android:gravity="center|top"
+            />
+        <ImageView
+            android:id="@+id/imgv_user6"
+            android:layout_marginTop="180dp"
+            android:layout_width="90dp"
+            android:layout_marginLeft="300dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:onClick="ver_perfiluser6"
+            />
+        <TextView
+            android:id="@+id/txtv_grupo_user6_carrera"
+            android:layout_marginTop="259dp"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="300dp"
+            android:text="Derecho"
+            android:textSize="14sp"
+            android:gravity="center|top"/>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_unirme_grupo"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:text="Unirme"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:onClick="unirme_grupo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

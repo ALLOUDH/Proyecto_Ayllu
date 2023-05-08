@@ -144,11 +144,12 @@
                     android:layout_marginVertical="0dp">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:layout_marginTop="10dp"
                         android:id="@+id/edtReportarProblema"
                         android:background="@drawable/btn_bg"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:hint="Ingrese su descripcion"
+                        android:hint="Ingresar descripción"
                         android:layout_marginRight="20dp"
                         android:layout_marginLeft="20dp"
                         android:textColorHint="@color/white" />
