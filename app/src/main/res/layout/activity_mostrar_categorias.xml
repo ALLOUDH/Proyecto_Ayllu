@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_decolorated"
-    tools:context=".Ay_frag_cate">
+    tools:context=".MostrarCategorias">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,16 +36,17 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:src="@drawable/logo_ayllu" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="50dp"
+                android:gravity="center|top"
                 android:text="Categorias"
-                android:textSize="35sp"
-                android:gravity="center"
-                android:textColor="@color/purple_text"/>
+                android:textColor="@color/purple_text"
+                android:textSize="30sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,7 +54,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btndelincuencia"
+                    android:id="@+id/btnDelincuencia"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
@@ -63,7 +64,7 @@
                     android:text="DELINCUENCIA" />
 
                 <Button
-                    android:id="@+id/btncontaminacion"
+                    android:id="@+id/btnContaminacion"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
@@ -79,7 +80,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btndesigualdad"
+                    android:id="@+id/btnDesigualdad"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
@@ -89,14 +90,14 @@
                     android:text="DESIGUALDAD" />
 
                 <Button
-                    android:id="@+id/btnfltagua"
+                    android:id="@+id/btnPobreza"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
                     android:background="@drawable/btn_bg"
                     android:textColor="@color/white"
-                    android:text="FALTA DE AGUA" />
+                    android:text="POBREZA" />
             </LinearLayout>
 
         </LinearLayout>

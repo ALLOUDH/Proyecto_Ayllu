@@ -137,7 +137,7 @@
             android:gravity="center|top"
             android:orientation="vertical">
             <ImageButton
-                android:id="@+id/btnAñadirImagenesRP"
+                android:id="@+id/btnAñadirImagenes"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/add_icon">
@@ -158,7 +158,7 @@
             android:gravity="center|top"
             android:orientation="vertical">
             <ImageButton
-                android:id="@+id/btnSeleccionarUbicacionRP"
+                android:id="@+id/btnSeleccionarUbicacion"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/add_icon">
@@ -180,7 +180,7 @@
             android:gravity="center|top"
             android:orientation="vertical">
             <ImageButton
-                android:id="@+id/btnAñadirVideosRP"
+                android:id="@+id/btnAñadirVideos"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/add_icon">

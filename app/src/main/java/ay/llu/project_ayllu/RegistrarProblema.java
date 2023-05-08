@@ -1,25 +1,29 @@
 package ay.llu.project_ayllu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import ay.llu.project_ayllu.MapsProblema.SeleccionarUbicacionProblema;
+
 public class RegistrarProblema extends AppCompatActivity {
     Spinner spnCategoria;
     EditText edtTituloRegistrarProblema, edtDescripcionRegistrarProblema;
-    Button btnRegistrarProblema;
+    Button btnRegistrarProblema; ;
+    ImageButton btnSeleccionarUbicacion, btnAñadirImagenes, btn;
     private DatabaseReference AylluDatabase;
 
     @Override
@@ -31,6 +35,8 @@ public class RegistrarProblema extends AppCompatActivity {
         edtDescripcionRegistrarProblema = findViewById(R.id.edtDescripcionRegistrarProblema);
         spnCategoria = findViewById(R.id.spnCategoria);
         btnRegistrarProblema = findViewById(R.id.btnRegistrarProblema);
+        btnSeleccionarUbicacion = findViewById(R.id.btnSeleccionarUbicacion);
+        btnAñadirImagenes = findViewById(R.id.btnAñadirImagenes);
 
         FirebaseApp.initializeApp(this);
         FirebaseDatabase db = FirebaseDatabase.getInstance();
@@ -39,6 +45,21 @@ public class RegistrarProblema extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registrarProblema();
+            }
+        });
+        btnSeleccionarUbicacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistrarProblema.this, SeleccionarUbicacionProblema.class);
+                startActivity(intent);
+            }
+        });
+        btnAñadirImagenes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                startActivityForResult(intent,1);
             }
         });
 

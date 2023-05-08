@@ -21,7 +21,6 @@ import java.util.List;
 
 import ay.llu.project_ayllu.ProblemaClase;
 import ay.llu.project_ayllu.R;
-import ay.llu.project_ayllu.problemaClaseP;
 
 public class ListarProblemas extends AppCompatActivity {
 

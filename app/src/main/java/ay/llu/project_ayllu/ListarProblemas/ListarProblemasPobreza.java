@@ -22,8 +22,9 @@ import java.util.List;
 import ay.llu.project_ayllu.ProblemaClase;
 import ay.llu.project_ayllu.R;
 
-public class ListarProblemasContaminacion extends AppCompatActivity {
-    ListView lstProblemasContaminacion;
+public class ListarProblemasPobreza extends AppCompatActivity {
+
+    ListView lstProblemasPobreza;
     List<ProblemaClase> listaProblemas = new ArrayList<ProblemaClase>();
     ArrayAdapter<ProblemaClase> arrayAdapterProblemas;
     ProblemaAdapter problemaAdapter;
@@ -34,19 +35,18 @@ public class ListarProblemasContaminacion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listar_problemas_contaminacion);
+        setContentView(R.layout.activity_listar_problemas_pobreza);
 
         FirebaseApp.initializeApp(this);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         AylluDatabase = database.getReference();
-        
-        lstProblemasContaminacion = findViewById(R.id.lstProblemasContaminacion);
-        listarProblemasContaminacion();
-        
+
+        lstProblemasPobreza = findViewById(R.id.lstProblemasPobreza);
+        listarProblemasPobreza();
     }
 
-    private void listarProblemasContaminacion() {
-        AylluDatabase.child("Problemas/Contaminacion").addValueEventListener(new ValueEventListener() {
+    private void listarProblemasPobreza() {
+        AylluDatabase.child("Problemas/Pobreza").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 listaProblemas.clear();
@@ -54,11 +54,11 @@ public class ListarProblemasContaminacion extends AppCompatActivity {
                 for(DataSnapshot objSnapchot : snapshot.getChildren()){
                     ProblemaClase p = objSnapchot.getValue(ProblemaClase.class);
                     listaProblemas.add(p);
-                    problemaAdapter = new ProblemaAdapter(ListarProblemasContaminacion.this,R.layout.recurso_adapter_problema,listaProblemas);
+                    problemaAdapter = new ProblemaAdapter(ListarProblemasPobreza.this,R.layout.recurso_adapter_problema,listaProblemas);
                 }
                 arrayAdapterProblemas = new ArrayAdapter<ProblemaClase>
-                        (ListarProblemasContaminacion.this, android.R.layout.simple_list_item_1,listaProblemas);
-                lstProblemasContaminacion.setAdapter(problemaAdapter);
+                        (ListarProblemasPobreza.this, android.R.layout.simple_list_item_1,listaProblemas);
+                lstProblemasPobreza.setAdapter(problemaAdapter);
 
             }
 
