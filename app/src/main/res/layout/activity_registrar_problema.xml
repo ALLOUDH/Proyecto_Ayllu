@@ -35,18 +35,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="22dp"
+        android:paddingHorizontal="32dp"
+        android:layout_marginBottom="20dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+        <Spinner
+            android:id="@+id/spnCategoria"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@drawable/edt_line">
 
-            android:text="Titulo del problema"
-            android:textColor="@color/purple_text"
-            android:textSize="18dp"
-            ></TextView>
+        </Spinner>
     </LinearLayout>
 
     <LinearLayout
@@ -77,8 +77,8 @@
             android:layout_height="match_parent"
             android:textColorHint="@color/white"
             >
-
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTituloRegistrarProblema"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:hint=""
@@ -106,6 +106,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="30dp"
+        android:paddingBottom="10dp"
         android:orientation="horizontal">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -116,6 +117,7 @@
             android:layout_marginVertical="0dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDescripcionRegistrarProblema"
                 android:background="@color/pink_rectangle"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
@@ -135,6 +137,7 @@
             android:gravity="center|top"
             android:orientation="vertical">
             <ImageButton
+                android:id="@+id/btnAñadirImagenesRP"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/add_icon">
@@ -155,6 +158,7 @@
             android:gravity="center|top"
             android:orientation="vertical">
             <ImageButton
+                android:id="@+id/btnSeleccionarUbicacionRP"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/add_icon">
@@ -176,6 +180,7 @@
             android:gravity="center|top"
             android:orientation="vertical">
             <ImageButton
+                android:id="@+id/btnAñadirVideosRP"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/add_icon">
@@ -201,6 +206,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnRegistrarProblema"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center"

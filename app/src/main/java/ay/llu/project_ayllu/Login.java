@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void llamar_menu_login(View view) {
-        Intent call_menu = new Intent(this, profile_user.class);
+        Intent call_menu = new Intent(this, userprofile.class);
         startActivity(call_menu);
     }
     public void llamar_recover_pass_login(View view) {
