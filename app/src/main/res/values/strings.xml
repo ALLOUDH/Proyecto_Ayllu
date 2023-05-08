@@ -28,4 +28,6 @@
         <item>Tecnología Médica - Terapia Fisica y Rehabilitación</item>
         <item>Tecnología Médica - Laboratorio Clínico y Anatomía Patológica</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
