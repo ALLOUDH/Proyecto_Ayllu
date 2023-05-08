@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_decolorated"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="134dp"
+        android:gravity="center"
+        android:text="Mi cuenta"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="367dp"
+        android:layout_height="181dp"
+        android:src="@drawable/logo_ayllu"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="230dp"
+        android:layout_marginBottom="70dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textColor="@color/purple_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/edt_Nombres_UserAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alan"
+            android:alpha="0.5"
+            android:textSize="20sp"
+            android:textColorHint="@color/purple_text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edt_line"
+            />
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellidos"
+            android:textColor="@color/purple_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            />
+        <EditText
+            android:id="@+id/edt_Apellidos_UserAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Brito Delgado"
+            android:alpha="0.5"
+            android:textSize="20sp"
+            android:textColorHint="@color/purple_text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edt_line"
+            />
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación"
+            android:textColor="@color/purple_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            />
+        <EditText
+            android:id="@+id/edt_Ubicación_UserAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Huancayo - Junin"
+            android:textSize="20sp"
+            android:alpha="0.5"
+            android:textColorHint="@color/purple_text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edt_line"
+            />
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nro de Celular"
+            android:textColor="@color/purple_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            />
+        <EditText
+            android:id="@+id/edt_NroCelular_UserAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="999999999"
+            android:textSize="20sp"
+            android:alpha="0.5"
+            android:textColorHint="@color/purple_text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edt_line"
+            />
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrera Profesional"
+            android:textColor="@color/purple_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Spinner
+                android:id="@+id/Spinner_UserAccount"
+                android:layout_width="20dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="-30dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/sort_down_icon"
+                android:contextClickable="true"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textColorHint="@color/purple_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_CarreraPro_UserAccount"
+                android:layout_width="302dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="5dp"
+                android:alpha="0.5"
+                android:background="@drawable/edt_line"
+                android:text="Ing. Civil"
+                android:textColor="@color/purple_text"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Spinner_UserAccount"
+                app:layout_constraintHorizontal_bias="0.526"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo Electrónico"
+            android:textColor="@color/purple_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="3dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_Email_UserAccount"
+                android:layout_width="315dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="28dp"
+                android:alpha="0.5"
+                android:background="@drawable/edt_line"
+                android:hint="alambrdelga@gmail.com"
+                android:textColorHint="@color/purple_text"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_edit_email_UserAccount"
+                app:layout_constraintHorizontal_bias="0.133"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/img_edit_email_UserAccount"
+                android:layout_width="25dp"
+                android:layout_height="19dp"
+                android:layout_marginEnd="28dp"
+                android:src="@drawable/edit_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:textColor="@color/purple_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_Pass_UserAccount"
+                android:layout_width="317dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="28dp"
+                android:alpha="0.5"
+                android:background="@drawable/edt_line"
+                android:hint="********"
+                android:textColorHint="@color/purple_text"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="25dp"
+                android:layout_height="19dp"
+                android:layout_marginEnd="28dp"
+                android:src="@drawable/edit_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_eliminar_cuenta_UserAccount"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:layout_marginRight="30dp"
+        android:padding="5dp"
+        android:text="Eliminar cuenta"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_guardar_cambios_UserAccount" />
+
+    <Button
+        android:id="@+id/btn_guardar_cambios_UserAccount"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Guardar cambios"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
