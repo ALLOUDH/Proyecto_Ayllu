@@ -20,12 +20,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import ay.llu.project_ayllu.R;
-import ay.llu.project_ayllu.RegistrarProblema;
+import ay.llu.project_ayllu.RegistrarProblema.RegistrarProblema;
+import ay.llu.project_ayllu.databinding.ActivitySeleccionarUbicacionProblemaBinding;
 
-public class SeleccionarUbicacionProblema extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener{
+public class SeleccionarUbicacionProblema extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener {
 
     private GoogleMap mMap;
-    //private ActivityLugarEntregaClienteBinding binding;
+    private ActivitySeleccionarUbicacionProblemaBinding binding;
 
     double mLat, mLong;
     Boolean crearMarca = false;
@@ -35,20 +36,13 @@ public class SeleccionarUbicacionProblema extends FragmentActivity implements On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //binding = ActivityLugarEntregaClienteBinding.inflate(getLayoutInflater());
-        //setContentView(binding.getRoot());
+        binding = ActivitySeleccionarUbicacionProblemaBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-//        btnAceptarPuntoEntrega.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                guardarUbicacion();
-//            }
-//        });
     }
 
     @Override
@@ -68,7 +62,7 @@ public class SeleccionarUbicacionProblema extends FragmentActivity implements On
 
         }else{
             if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.ACCESS_FINE_LOCATION)){
-                Toast.makeText(this, "permiso para utilizar ubicacion", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dio su permiso para utilizar su ubicacion", Toast.LENGTH_SHORT).show();
             }else{
                 ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
             }
@@ -86,7 +80,7 @@ public class SeleccionarUbicacionProblema extends FragmentActivity implements On
                         .anchor(0.5F,0.5F));
                 mLat = latLng.latitude;
                 mLong = latLng.longitude;
-
+                Toast.makeText(SeleccionarUbicacionProblema.this, mLat + "<>" + mLong, Toast.LENGTH_SHORT).show();
                 Intent intent= new Intent(SeleccionarUbicacionProblema.this, RegistrarProblema.class);
                 Bundle punto = new Bundle();
                 punto.putParcelable("lugar", new LatLng(mLat, mLong));
@@ -96,28 +90,9 @@ public class SeleccionarUbicacionProblema extends FragmentActivity implements On
                 crearMarca=false;
             }
         });
-
     }
-
     @Override
     public void onClick(View view) {
-//        switch (view.getId()){
-//            case R.id.btnAceptarPuntodeEntrega:{
-//                if(crearMarca){
-//                    Intent intent=new Intent(LugarEntregaCliente.this, com.example.smjdisfraces.cliente.RegistrarPedido.class);
-//                    Bundle punto = new Bundle();
-//                    punto.putParcelable("location", new LatLng(mLat, mLong));
-//                    intent.putExtras(punto);
-//                    startActivity(intent);
-//                    mMap.clear();
-//                    crearMarca=false;
-//                }else{
-//                    Toast.makeText(this, "Falta marca la ubicación del pedido", Toast.LENGTH_SHORT).show();
-//                }
-//                break;
-//            }
-//        }
 
     }
-
 }

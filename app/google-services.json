@@ -1,55 +1,33 @@
 {
   "project_info": {
-<<<<<<< HEAD
-    "project_number": "1039072894094",
-    "project_id": "project-ayllu",
-    "storage_bucket": "project-ayllu.appspot.com"
-=======
     "project_number": "231611171331",
     "project_id": "ayllu-4a46d",
     "storage_bucket": "ayllu-4a46d.appspot.com"
->>>>>>> origin/master
   },
   "client": [
     {
       "client_info": {
-<<<<<<< HEAD
-        "mobilesdk_app_id": "1:1039072894094:android:f19192303e490c8034fddf",
-=======
         "mobilesdk_app_id": "1:231611171331:android:5145a5bf82280fa9c58436",
->>>>>>> origin/master
         "android_client_info": {
           "package_name": "ay.llu.project_ayllu"
         }
       },
       "oauth_client": [
         {
-<<<<<<< HEAD
-          "client_id": "1039072894094-e13osd4qpiavrrc4pc0n21o6dp7mhiec.apps.googleusercontent.com",
-=======
           "client_id": "231611171331-8q3am1sinnu52gie2cosf8pmeqb7onoo.apps.googleusercontent.com",
->>>>>>> origin/master
           "client_type": 3
         }
       ],
       "api_key": [
         {
-<<<<<<< HEAD
-          "current_key": "AIzaSyBxhE7jIVxg5930xar3-_E2d5FQUTP5SW0"
-=======
           "current_key": "AIzaSyCuTskPpeCEaDIhmYyILEnJaJnUGA5mZOs"
->>>>>>> origin/master
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-<<<<<<< HEAD
-              "client_id": "1039072894094-e13osd4qpiavrrc4pc0n21o6dp7mhiec.apps.googleusercontent.com",
-=======
               "client_id": "231611171331-8q3am1sinnu52gie2cosf8pmeqb7onoo.apps.googleusercontent.com",
->>>>>>> origin/master
               "client_type": 3
             }
           ]

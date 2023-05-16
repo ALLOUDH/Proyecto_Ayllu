@@ -1,4 +1,4 @@
-package ay.llu.project_ayllu;
+package ay.llu.project_ayllu.RegistrarProblema;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +18,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import ay.llu.project_ayllu.MapsProblema.SeleccionarUbicacionProblema;
+import ay.llu.project_ayllu.ProblemaClase;
+import ay.llu.project_ayllu.R;
 
 public class RegistrarProblema extends AppCompatActivity {
     Spinner spnCategoria;

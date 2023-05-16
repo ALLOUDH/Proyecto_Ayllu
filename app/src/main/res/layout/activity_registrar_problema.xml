@@ -32,190 +32,193 @@
             ></TextView>
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="32dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:id="@+id/spnCategoria"
-            android:textSize="18sp"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@drawable/edt_line">
-
-        </Spinner>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="22dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
 
-            android:text="Titulo del problema"
-            android:textColor="@color/purple_text"
-            android:textSize="18dp"
-            ></TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:paddingHorizontal="30dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColorHint="@color/white"
-            >
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtTituloRegistrarProblema"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:hint=""
-                android:background="@color/pink_rectangle"
-                android:textColorHint="@color/white" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="22dp"
-        android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="32dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/spnCategoria"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@drawable/edt_line">
+                </Spinner>
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-
-            android:text="Descripción del problema"
-            android:textColor="@color/purple_text"
-            android:textSize="18dp"
-            ></TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="30dp"
-        android:paddingBottom="10dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="0dp"
-            android:textColorHint="@color/white"
-            android:layout_marginVertical="0dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtDescripcionRegistrarProblema"
-                android:background="@color/pink_rectangle"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:hint=""
-                android:textColorHint="@color/white" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center|top"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center|top"
-            android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/btnAñadirImagenes"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@drawable/add_icon">
-            </ImageButton>
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:paddingLeft="22dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Titulo del problema"
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    ></TextView>
+            </LinearLayout>
 
-                android:text="Añadir imagenes"
-                android:textColor="@color/purple_text"
-                android:textSize="15dp"
-                ></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center|top"
-            android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/btnSeleccionarUbicacion"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@drawable/add_icon">
-            </ImageButton>
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:gravity="center"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="30dp"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/white"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTituloRegistrarProblema"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_cuadros"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
 
-                android:text="Seleccionar ubicación"
-                android:textColor="@color/purple_text"
-                android:textSize="15dp"
-                ></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:gravity="center|top"
-            android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/btnAñadirVideos"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@drawable/add_icon">
-            </ImageButton>
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:gravity="center"
+                android:paddingLeft="22dp"
+                android:orientation="horizontal">
 
-                android:text="Añadir videos"
-                android:textColor="@color/purple_text"
-                android:textSize="15dp"
-                ></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Descripción del problema"
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    ></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="0dp"
+                    android:textColorHint="@color/white"
+                    android:layout_marginVertical="0dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtDescripcionRegistrarProblema"
+                        android:background="@drawable/bg_cuadros"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/btnAñadirImagenes"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/add_icon">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+
+                        android:text="Añadir imagenes"
+                        android:textColor="@color/purple_text"
+                        android:textSize="15dp"
+                        ></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/btnSeleccionarUbicacion"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/add_icon">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:gravity="center"
+
+                        android:text="Seleccionar ubicación"
+                        android:textColor="@color/purple_text"
+                        android:textSize="15dp"
+                        ></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/btnAñadirVideos"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/add_icon">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:gravity="center"
+
+                        android:text="Añadir videos"
+                        android:textColor="@color/purple_text"
+                        android:textSize="15dp"
+                        ></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingHorizontal="90dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRegistrarProblema"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/btn_bg"
+
+                    android:text="Registrar"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"></Button>
+            </LinearLayout>
+
         </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:paddingHorizontal="90dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnRegistrarProblema"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:background="@drawable/btn_bg"
-
-            android:text="Registrar"
-            android:textColor="@color/white"
-            android:textSize="18dp"></Button>
-    </LinearLayout>
-
-
+    </ScrollView>
 </LinearLayout>

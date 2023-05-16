@@ -1,13 +1,12 @@
 package ay.llu.project_ayllu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Grupos extends AppCompatActivity implements View.OnClickListener {
 
@@ -43,27 +42,27 @@ public class Grupos extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
     }
     public void ver_perfiluser1(View view) {
-        Intent call_userprofile = new Intent(this, profile_user.class);
+        Intent call_userprofile = new Intent(this, userprofile.class);
         startActivity(call_userprofile);
     }
     public void ver_perfiluser2(View view) {
-        Intent call_userprofile = new Intent(this, profile_user.class);
+        Intent call_userprofile = new Intent(this, userprofile.class);
         startActivity(call_userprofile);
     }
     public void ver_perfiluser3(View view) {
-        Intent call_userprofile = new Intent(this, profile_user.class);
+        Intent call_userprofile = new Intent(this, userprofile.class);
         startActivity(call_userprofile);
     }
     public void ver_perfiluser4(View view) {
-        Intent call_userprofile = new Intent(this, profile_user.class);
+        Intent call_userprofile = new Intent(this, userprofile.class);
         startActivity(call_userprofile);
     }
     public void ver_perfiluser5(View view) {
-        Intent call_userprofile = new Intent(this, profile_user.class);
+        Intent call_userprofile = new Intent(this, userprofile.class);
         startActivity(call_userprofile);
     }
     public void ver_perfiluser6(View view) {
-        Intent call_userprofile = new Intent(this, profile_user.class);
+        Intent call_userprofile = new Intent(this, userprofile.class);
         startActivity(call_userprofile);
     }
 }
