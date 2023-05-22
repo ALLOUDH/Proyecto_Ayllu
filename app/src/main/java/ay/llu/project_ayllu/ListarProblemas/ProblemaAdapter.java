@@ -16,7 +16,6 @@ import ay.llu.project_ayllu.R;
 import java.util.List;
 
 import ay.llu.project_ayllu.ProblemaClase;
-import ay.llu.project_ayllu.problemaClaseP;
 
 public class ProblemaAdapter extends ArrayAdapter<ProblemaClase>{
     private List<ProblemaClase> listProblema;

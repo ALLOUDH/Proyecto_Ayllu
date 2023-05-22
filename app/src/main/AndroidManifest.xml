@@ -12,7 +12,32 @@
         android:theme="@style/Theme.Project_Ayllu"
         tools:targetApi="31">
         <activity
-            android:name=".chat.ChatGrupo"
+            android:name=".RegistrarProblema.SubirVideos"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarProblema.SubirImagenes"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBKUhQCaQPifKFSRDboyUHxKujwqNKyNm8" />
+
+        <activity
+            android:name=".MapsProblema.SeleccionarUbicacionProblema"
+            android:exported="false"
+            android:label="@string/title_activity_seleccionar_ubicacion_problema" />
+        <activity
+            android:name=".RegistrarProblema.RegistrarProblema"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,20 +46,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CodigoVerificacion"
-            android:exported="false" />
-        <activity
-            android:name=".UserAccount"
-            android:exported="false"></activity>
-        <activity
-            android:name=".Grupos"
-            android:exported="false"></activity>
-        <activity
-            android:name=".RegistrarProblema"
-            android:exported="false"></activity>
-        <activity
             android:name=".ReportarProblema"
             android:exported="false" />
+        <activity
+            android:name=".MostrarCategorias"
+            android:exported="true" />
+        <activity
+            android:name=".ListarProblemas.ListarProblemas"
+            android:exported="true" />
         <activity
             android:name=".profile_user"
             android:exported="false" />
@@ -52,8 +71,19 @@
             android:exported="false" />
         <activity
             android:name=".RecoverPass"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
+        <activity
+            android:name=".ListarProblemas.ListarProblemasPobreza"
+            android:exported="false" />
+        <activity
+            android:name=".ListarProblemas.ListarProblemasContaminacion"
+            android:exported="false" />
+        <activity
+            android:name=".ListarProblemas.ListarProblemasDelincuencia"
+            android:exported="false" />
+        <activity
+            android:name=".ListarProblemas.ListarProblemasDesigualdad"
+            android:exported="false" />
         <activity
             android:name=".Login"
             android:exported="false" />
