@@ -1,10 +1,8 @@
-package ay.llu.project_ayllu.MapsProblema;
+package ay.llu.project_ayllu.InformacionProblema;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
@@ -20,38 +18,49 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import ay.llu.project_ayllu.R;
-import ay.llu.project_ayllu.RegistrarProblema.RegistrarProblema;
-import ay.llu.project_ayllu.databinding.ActivitySeleccionarUbicacionProblemaBinding;
+import ay.llu.project_ayllu.databinding.ActivityMostrarUbicacionProblemaBinding;
 
-public class SeleccionarUbicacionProblema extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener {
+public class MostrarUbicacionProblema extends FragmentActivity implements OnMapReadyCallback {
 
+    String latitud,longitud;
+    double mLat,mLong;
+
+    LatLng destino;
     private GoogleMap mMap;
-    private ActivitySeleccionarUbicacionProblemaBinding binding;
-
-    double mLat, mLong;
-    Boolean crearMarca = false;
-    LatLng unLugar;
+    private ActivityMostrarUbicacionProblemaBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivitySeleccionarUbicacionProblemaBinding.inflate(getLayoutInflater());
+        binding = ActivityMostrarUbicacionProblemaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        latitud = getIntent().getStringExtra("lati");
+        longitud = getIntent().getStringExtra("longi");
+
+        mLat = Double.parseDouble(latitud);
+        mLong = Double.parseDouble(longitud);
+        destino = new LatLng(mLat,mLong);
     }
 
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        unLugar = new LatLng(-12.047986752139545, -75.19903770004737);
-        CameraPosition cameraPosition = CameraPosition.builder().target(unLugar).zoom(12).build();
-        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             //mMap.setMyLocationEnabled(true);
@@ -67,33 +76,11 @@ public class SeleccionarUbicacionProblema extends FragmentActivity implements On
                 ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
             }
         }
-
-        mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
-            @Override
-            public void onMapLongClick(LatLng latLng) {
-                crearMarca=true;
-                mMap.clear();
-                mMap.addMarker( new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.marcador))
-                        .title("punto")
-                        .snippet("Yo estuve aqui")
-                        .position(latLng)
-                        .anchor(0.5F,0.5F));
-                mLat = latLng.latitude;
-                mLong = latLng.longitude;
-                Toast.makeText(SeleccionarUbicacionProblema.this, mLat + "<>" + mLong, Toast.LENGTH_SHORT).show();
-                Intent intent= new Intent(SeleccionarUbicacionProblema.this, RegistrarProblema.class);
-                Bundle punto = new Bundle();
-                punto.putParcelable("lugar", new LatLng(mLat, mLong));
-                intent.putExtras(punto);
-                //finish();
-                startActivity(intent);
-                mMap.clear();
-                crearMarca=false;
-            }
-        });
-    }
-    @Override
-    public void onClick(View view) {
-
+        CameraPosition cameraPosition = CameraPosition.builder().target(destino).zoom(17).build();
+        mMap.addMarker( new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.marcador))
+                .title("Ubicación Porblema")
+                .position(destino)
+                .anchor(0.5F,0.5F));
+        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 }

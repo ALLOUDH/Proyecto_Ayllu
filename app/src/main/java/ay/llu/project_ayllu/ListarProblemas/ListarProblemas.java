@@ -1,11 +1,11 @@
 package ay.llu.project_ayllu.ListarProblemas;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -19,8 +19,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import ay.llu.project_ayllu.ProblemaClase;
 import ay.llu.project_ayllu.R;
+import ay.llu.project_ayllu.RegistrarProblema.ProblemaClase;
 
 public class ListarProblemas extends AppCompatActivity {
 
