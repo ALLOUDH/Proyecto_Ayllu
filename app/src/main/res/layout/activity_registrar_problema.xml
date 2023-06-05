@@ -154,7 +154,28 @@
                         android:textSize="15dp"
                         ></TextView>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/btnSeleccionarUbicacion"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/add_icon">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:gravity="center"
 
+                        android:text="Seleccionar ubicación"
+                        android:textColor="@color/purple_text"
+                        android:textSize="15dp"
+                        ></TextView>
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"

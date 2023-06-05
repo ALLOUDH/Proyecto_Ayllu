@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         imgcardPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, userprofile.class);
+                Intent intent = new Intent(MainActivity.this, UserProfiles.class);
                 startActivity(intent);
             }
         });

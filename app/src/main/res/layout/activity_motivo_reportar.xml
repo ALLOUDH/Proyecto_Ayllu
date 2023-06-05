@@ -23,7 +23,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="134dp"
         android:gravity="center"
-        android:text="Registrarse"
+        android:text="REPORTAR"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -47,45 +47,24 @@
         >
 
         <EditText
-            android:id="@+id/edt_Nombres_SignUp"
+            android:id="@+id/edtMotivo"
             android:layout_marginTop="250dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombres"
+            android:hint="Escriba Motivo"
             android:textColorHint="@color/purple_text"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/edt_line"
             />
-        <EditText
-            android:id="@+id/edt_Apellidos_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Apellidos"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <EditText
-            android:id="@+id/edt_NroCelular_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Numero de celular"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
+
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
             <Spinner
-                android:id="@+id/Spinner_SignUp"
+                android:id="@+id/SpinnerReportar"
                 android:layout_width="20dp"
                 android:layout_height="21dp"
                 android:layout_marginStart="-30dp"
@@ -94,61 +73,30 @@
                 android:contextClickable="true"
                 android:overlapAnchor="false"
                 android:spinnerMode="dropdown"
+                android:entries="@array/MotivodeReportar"
                 android:textColorHint="@color/purple_text"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txtCarreraPro_SignUp"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintStart_toEndOf="@+id/txtIncumplimiento"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtCarreraPro_SignUp"
-                android:layout_width="304dp"
-                android:layout_height="23dp"
+                android:id="@+id/txtIncumplimiento"
+                android:layout_width="310dp"
+                android:layout_height="25dp"
                 android:layout_marginTop="35dp"
                 android:background="@drawable/edt_line"
-                android:text="Carrera Profesional"
+                android:text="Imcumplimiento"
                 android:textColor="@color/purple_text"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/Spinner_SignUp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.306"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <EditText
-            android:id="@+id/edt_Email_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Correo Electronico"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <EditText
-            android:id="@+id/edt_Pass_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Contraseña"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <EditText
-            android:id="@+id/edt_ConfirmPass_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Confirmar Contraseña"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
 
         <Button
             android:id="@+id/btn_Registrar_SignUp"
@@ -157,7 +105,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:background="@drawable/btn_bg"
-            android:text="REGISTRAR"
+            android:text="Enviar"
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold"/>

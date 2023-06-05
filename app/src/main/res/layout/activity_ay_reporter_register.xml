@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_decolorated"
-    tools:context=".SignUp">
+    tools:context=".Ay_reporter_register">
 
     <ImageView
         android:id="@+id/imageView"
@@ -47,29 +47,19 @@
         >
 
         <EditText
-            android:id="@+id/edt_Nombres_SignUp"
+            android:id="@+id/edt_Nombres_reporter"
             android:layout_marginTop="250dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombres"
+            android:hint="Nombres Completos"
             android:textColorHint="@color/purple_text"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/edt_line"
             />
+
         <EditText
-            android:id="@+id/edt_Apellidos_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Apellidos"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <EditText
-            android:id="@+id/edt_NroCelular_SignUp"
+            android:id="@+id/edt_NroCelular_reporter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -79,13 +69,14 @@
             android:layout_marginRight="30dp"
             android:background="@drawable/edt_line"
             />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
 
             <Spinner
-                android:id="@+id/Spinner_SignUp"
+                android:id="@+id/Spinner_departamento_reporter"
                 android:layout_width="20dp"
                 android:layout_height="21dp"
                 android:layout_marginStart="-30dp"
@@ -96,68 +87,108 @@
                 android:spinnerMode="dropdown"
                 android:textColorHint="@color/purple_text"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txtCarreraPro_SignUp"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintStart_toEndOf="@+id/txtDepartamento_reporter"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtCarreraPro_SignUp"
+                android:id="@+id/txtDepartamento_reporter"
                 android:layout_width="304dp"
                 android:layout_height="23dp"
                 android:layout_marginTop="35dp"
                 android:background="@drawable/edt_line"
-                android:text="Carrera Profesional"
+                android:text="Departamento"
                 android:textColor="@color/purple_text"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/Spinner_SignUp"
+                app:layout_constraintEnd_toStartOf="@+id/Spinner_departamento_reporter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <EditText
-            android:id="@+id/edt_Email_SignUp"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Correo Electronico"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <EditText
-            android:id="@+id/edt_Pass_SignUp"
+            android:layout_height="wrap_content">
+
+
+            <Spinner
+                android:id="@+id/Spinner_provincia_reporter"
+                android:layout_width="20dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="-30dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/sort_down_icon"
+                android:contextClickable="true"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textColorHint="@color/purple_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtProvincia_reporter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtProvincia_reporter"
+                android:layout_width="304dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edt_line"
+                android:text="Provincia"
+                android:textColor="@color/purple_text"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Spinner_provincia_reporter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Contraseña"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <EditText
-            android:id="@+id/edt_ConfirmPass_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Confirmar Contraseña"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
+            android:layout_height="wrap_content">
+
+
+            <Spinner
+                android:id="@+id/Spinner_distrito_reporter"
+                android:layout_width="20dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="-30dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/sort_down_icon"
+                android:contextClickable="true"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textColorHint="@color/purple_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtDistrito_reporter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtDistrito_reporter"
+                android:layout_width="304dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edt_line"
+                android:text="Distrito"
+                android:textColor="@color/purple_text"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Spinner_distrito_reporter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <Button
-            android:id="@+id/btn_Registrar_SignUp"
+            android:id="@+id/btn_Registrar_Reporter"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:background="@drawable/btn_bg"
-            android:text="REGISTRAR"
+            android:text="Guardar y continuar"
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold"/>

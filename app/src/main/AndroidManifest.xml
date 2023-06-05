@@ -74,10 +74,16 @@
             android:name=".ListarProblemas.ListarProblemas"
             android:exported="true" />
         <activity
-            android:name=".profile_user"
+            android:name=".UserProfiles"
             android:exported="false" />
         <activity
-            android:name=".frag_cate_publi"
+            android:name=".RecuperarContrasena.Ay_Contra_recup"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarContrasena.Ay_code_verify"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarContrasena.Ay_new_pass"
             android:exported="false" />
         <activity
             android:name=".Splash"
@@ -94,9 +100,7 @@
         <activity
             android:name=".SignUp"
             android:exported="false" />
-        <activity
-            android:name=".RecoverPass"
-            android:exported="false" />
+
         <activity
             android:name=".ListarProblemas.ListarProblemasPobreza"
             android:exported="false" />
@@ -115,6 +119,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+
     </application>
 
 </manifest>

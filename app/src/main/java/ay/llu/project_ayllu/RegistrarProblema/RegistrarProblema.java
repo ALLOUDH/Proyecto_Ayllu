@@ -21,8 +21,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
+import ay.llu.project_ayllu.Ay_up_images;
 import ay.llu.project_ayllu.MapsProblema.SeleccionarUbicacionProblema;
 import ay.llu.project_ayllu.R;
+import ay.llu.project_ayllu.SignUp;
 
 public class RegistrarProblema extends AppCompatActivity {
     Spinner spnCategoria;
@@ -107,7 +109,10 @@ public class RegistrarProblema extends AppCompatActivity {
         spnCategoria.setAdapter(adapter);
 
     }
-
+    public void llamaranadirimagen(View view) {
+        Intent image = new Intent(this, Ay_up_images.class);
+        startActivity(image);
+    }
     private void registrarProblema() {
         String id = AylluDatabase.push().getKey();
         String categoria = spnCategoria.getSelectedItem().toString();
