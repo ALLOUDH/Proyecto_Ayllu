@@ -115,6 +115,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
                     android:layout_marginHorizontal="0dp"
                     android:textColorHint="@color/white"
                     android:layout_marginVertical="0dp">
@@ -122,6 +123,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edtDescripcionRegistrarProblema"
                         android:background="@drawable/bg_cuadros"
+                        android:layout_gravity="top|left"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
                         android:textColor="@color/white" />
@@ -149,55 +151,12 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
 
-                        android:text="Añadir imagenes"
+                        android:text="Añadir Evidencias"
                         android:textColor="@color/purple_text"
                         android:textSize="15dp"
                         ></TextView>
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:orientation="vertical">
-                    <ImageButton
-                        android:id="@+id/btnSeleccionarUbicacion"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/add_icon">
-                    </ImageButton>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
-                        android:gravity="center"
 
-                        android:text="Seleccionar ubicación"
-                        android:textColor="@color/purple_text"
-                        android:textSize="15dp"
-                        ></TextView>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:orientation="vertical">
-                    <ImageButton
-                        android:id="@+id/btnAñadirVideos"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/add_icon">
-                    </ImageButton>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
-                        android:gravity="center"
-
-                        android:text="Añadir videos"
-                        android:textColor="@color/purple_text"
-                        android:textSize="15dp"
-                        ></TextView>
-                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout

@@ -22,9 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Calendar;
 
 import ay.llu.project_ayllu.Ay_up_images;
-import ay.llu.project_ayllu.MapsProblema.SeleccionarUbicacionProblema;
 import ay.llu.project_ayllu.R;
-import ay.llu.project_ayllu.SignUp;
 
 public class RegistrarProblema extends AppCompatActivity {
     Spinner spnCategoria;
@@ -48,9 +46,8 @@ public class RegistrarProblema extends AppCompatActivity {
         edtDescripcionRegistrarProblema = findViewById(R.id.edtDescripcionRegistrarProblema);
         spnCategoria = findViewById(R.id.spnCategoria);
         btnRegistrarProblema = findViewById(R.id.btnRegistrarProblema);
-        btnSeleccionarUbicacion = findViewById(R.id.btnSeleccionarUbicacion);
         btnAñadirImagenes = findViewById(R.id.btnAñadirImagenes);
-        btnAñadirVideos = findViewById(R.id.btnAñadirVideos);
+
 
         //Capturar fecha actual
         Calendar calendar = Calendar.getInstance();
@@ -80,29 +77,14 @@ public class RegistrarProblema extends AppCompatActivity {
                 registrarProblema();
             }
         });
-        btnSeleccionarUbicacion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegistrarProblema.this, SeleccionarUbicacionProblema.class);
-                startActivity(intent);
-            }
-        });
         btnAñadirImagenes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("image/*");
-                startActivityForResult(intent,1);
+                Intent intent = new Intent(RegistrarProblema.this, Ay_up_images.class);
+                startActivity(intent);
             }
         });
-        btnAñadirVideos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("video/*");
-                startActivityForResult(intent,1);
-            }
-        });
+
 
         String [] categorias ={"Contaminación", "Delincuencia", "Desigualdad","Pobreza"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categorias);

@@ -18,6 +18,9 @@
             android:name=".MenuReportero"
             android:exported="false" />
         <activity
+            android:name=".Ay_up_images"
+            android:exported="false" />
+        <activity
             android:name=".loginAdministrador"
             android:exported="false" />
         <activity
