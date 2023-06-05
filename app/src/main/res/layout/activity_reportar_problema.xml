@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white_decolorated"
-    tools:context=".MainActivity">
+    tools:context=".ReportarProblema">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,8 +68,8 @@
                 android:background="@color/pink_rectangle"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:hint="Describe el problema"
-                android:textColorHint="@color/white" />
+                android:textColorHint="@color/white"
+                android:gravity="top"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <LinearLayout

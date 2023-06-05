@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import ay.llu.project_ayllu.chat.ChatGrupo;
+
 public class Grupos extends AppCompatActivity implements View.OnClickListener {
 
     TextView txtvcategoria_titulo;
@@ -41,6 +43,8 @@ public class Grupos extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        Intent call_chatgroup = new Intent(this, ChatGrupo.class);
+        startActivity(call_chatgroup);
     }
     public void ver_perfiluser1(View view) {
         Intent call_userprofile = new Intent(this, UserProfiles.class);

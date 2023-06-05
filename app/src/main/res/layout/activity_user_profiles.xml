@@ -36,11 +36,12 @@
                     android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
+                    android:layout_marginBottom="44dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:srcCompat="@drawable/logo_ayllu"
-                    tools:layout_editor_absoluteY="-20dp" />
+                    app:srcCompat="@drawable/logo_ayllu" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -145,14 +146,14 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_marginTop="10dp"
-                        android:id="@+id/edtReportarProblema"
+                        android:id="@+id/edt_userdescr"
                         android:background="@drawable/btn_bg"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:hint="Ingresar descripción"
                         android:layout_marginRight="20dp"
                         android:layout_marginLeft="20dp"
-                        android:textColorHint="@color/white" />
+                        android:textColorHint="@color/white"
+                        android:gravity="top|left"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>

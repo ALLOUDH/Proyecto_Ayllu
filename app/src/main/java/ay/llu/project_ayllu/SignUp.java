@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -62,6 +63,12 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         btnRegistrar.setOnClickListener(this);
         Ayllu = FirebaseDatabase.getInstance().getReference();
         listar_carreras();
+        edtNombreSU.setTextColor(getColor(R.color.purple_text));
+        edtApellidoSU.setTextColor(getColor(R.color.purple_text));
+        edtConfirmPassSU.setTextColor(getColor(R.color.purple_text));
+        edtContraSU.setTextColor(getColor(R.color.purple_text));
+        edtCorreoSU.setTextColor(getColor(R.color.purple_text));
+        edtNumeroCel.setTextColor(getColor(R.color.purple_text));
     }
     public void listar_carreras(){
         final List<Carreras> carreras = new ArrayList<>();

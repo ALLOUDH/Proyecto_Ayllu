@@ -36,6 +36,8 @@ public class Login extends AppCompatActivity {
         edtPass=findViewById(R.id.edtContraseñaUsuario);
         txtOlvidaste=findViewById(R.id.txtOlvidasteUsuario);
         btnIniciar=findViewById(R.id.btnIngresarUsuario);
+        edtName.setTextColor(getColor(R.color.purple_text));
+        edtPass.setTextColor(getColor(R.color.purple_text));
 
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
