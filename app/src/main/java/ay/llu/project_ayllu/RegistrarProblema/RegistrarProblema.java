@@ -28,7 +28,7 @@ public class RegistrarProblema extends AppCompatActivity {
     Spinner spnCategoria;
     EditText edtTituloRegistrarProblema, edtDescripcionRegistrarProblema;
     Button btnRegistrarProblema;
-    String fechaActual;
+    String fechaActual, horaActual;
 
     TextView txtLat,txtLong;
     String lati,longi;
@@ -50,23 +50,24 @@ public class RegistrarProblema extends AppCompatActivity {
         btnAñadirImagenes = findViewById(R.id.btnAñadirImagenes);
         btnAñadirVideos = findViewById(R.id.btnAñadirVideos);
 
+        //Capturar fecha actual
         Calendar calendar = Calendar.getInstance();
-
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
-
         fechaActual = day + "/" + (month + 1) + "/" + year;
+        //Capturar hora actual
+        int hora = calendar.get(Calendar.HOUR_OF_DAY);
+        int minutos = calendar.get(Calendar.MINUTE);
+        horaActual = hora+":"+minutos;
 
-//        txtLat = findViewById(R.id.txtLatitud);
-//        txtLong = findViewById(R.id.txtLongitud);
+
         LatLng latLng = intent.getParcelableExtra("lugar");
         mlat = latLng.latitude;
         mLong = latLng.longitude;
         lati = String.valueOf(mlat);
         longi = String.valueOf(mLong);
-//        txtLat.setText(lati);
-//        txtLong.setText(longi);
+
 
         FirebaseApp.initializeApp(this);
         FirebaseDatabase db = FirebaseDatabase.getInstance();
@@ -115,6 +116,7 @@ public class RegistrarProblema extends AppCompatActivity {
         String lat = lati;
         String lon = longi;
         String fecha = fechaActual;
+        String hora = horaActual;
 
         if(TextUtils.isEmpty(tituloRegistrarProblema)||TextUtils.isEmpty(descripcionRegistrarProblema)){
             Toast.makeText(this, "Por favor completar todos los campos", Toast.LENGTH_SHORT).show();
@@ -122,34 +124,34 @@ public class RegistrarProblema extends AppCompatActivity {
         }
 
         if (categoria.equals("Contaminación")){
-            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha);
+            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
             AylluDatabase.child("Problemas/Contaminación").child(id).setValue(unProblema);
             Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
             edtTituloRegistrarProblema.setText("");
             edtDescripcionRegistrarProblema.setText("");
         }
         if (categoria.equals("Delincuencia")){
-            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha);
+            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
             AylluDatabase.child("Problemas/Delincuencia").child(id).setValue(unProblema);
             Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
             edtTituloRegistrarProblema.setText("");
             edtDescripcionRegistrarProblema.setText("");
         }
         if (categoria.equals("Desigualdad")){
-            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha);
+            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
             AylluDatabase.child("Problemas/Desigualdad").child(id).setValue(unProblema);
             Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
             edtTituloRegistrarProblema.setText("");
             edtDescripcionRegistrarProblema.setText("");
         }
         if (categoria.equals("Pobreza")){
-            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha);
+            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
             AylluDatabase.child("Problemas/Pobreza").child(id).setValue(unProblema);
             Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
             edtTituloRegistrarProblema.setText("");
             edtDescripcionRegistrarProblema.setText("");
         }
-        ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha);
+        ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
         AylluDatabase.child("Problemas_Recientes").child(id).setValue(unProblema);
         Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
         edtTituloRegistrarProblema.setText("");

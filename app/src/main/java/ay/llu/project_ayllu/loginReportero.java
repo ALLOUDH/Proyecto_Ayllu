@@ -30,6 +30,7 @@ public class loginReportero extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(loginReportero.this, SignUp.class);
                 startActivity(intent);
+
             }
         });
     }

@@ -8,12 +8,13 @@ public class ProblemaClase {
     private String latitud;
     private String longitud;
     private String fecha;
+    private String hora;
 
 
     public ProblemaClase(){
     }
 
-    public ProblemaClase(String id, String categoria, String titulo, String descripcion, String latitud, String longitud, String fecha) {
+    public ProblemaClase(String id, String categoria, String titulo, String descripcion, String latitud, String longitud, String fecha, String hora) {
         this.id = id;
         this.categoria = categoria;
         this.titulo = titulo;
@@ -21,6 +22,7 @@ public class ProblemaClase {
         this.latitud = latitud;
         this.longitud = longitud;
         this.fecha = fecha;
+        this.hora = hora;
     }
 
     public String getId() {
@@ -79,6 +81,14 @@ public class ProblemaClase {
         this.fecha = fecha;
     }
 
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
     @Override
     public String toString() {
         return "ProblemaClase{" +
@@ -89,6 +99,7 @@ public class ProblemaClase {
                 ", latitud='" + latitud + '\'' +
                 ", longitud='" + longitud + '\'' +
                 ", fecha='" + fecha + '\'' +
+                ", hora='" + hora + '\'' +
                 '}';
     }
 }
