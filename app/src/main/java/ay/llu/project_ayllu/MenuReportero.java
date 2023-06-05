@@ -40,13 +40,15 @@ public class MenuReportero extends AppCompatActivity {
         imgcardAyudaReportero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MenuReportero.this, Ay_ayuda.class);
+                startActivity(intent);
             }
         });
         imgcardNosotrosReportero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MenuReportero.this, AcercaNosotros.class);
+                startActivity(intent);
             }
         });
 

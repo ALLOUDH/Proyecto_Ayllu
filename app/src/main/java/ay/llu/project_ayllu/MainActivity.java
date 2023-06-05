@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import ay.llu.project_ayllu.ListarProblemas.ListarProblemas;
+import ay.llu.project_ayllu.Personalizacion.Personalizacion;
 
 public class MainActivity extends AppCompatActivity {
     ImageView imgcardProblemasRecientes,imgcardCategorias,
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         imgcardProblemasRecientes = findViewById(R.id.imgcardProblemasRecientes);
         imgcardCategorias = findViewById(R.id.imgcardCategorias);
-        imgcardPerfil = findViewById(R.id.imgcardConfiguracion);
+        imgcardPerfil = findViewById(R.id.imgcardPerfil);
         imgcardConfiguracion = findViewById(R.id.imgcardConfiguracion);
         imgcardAyuda = findViewById(R.id.imgcardAyuda);
         imgcardNosotros = findViewById(R.id.imgcardNosotros);
@@ -42,26 +43,29 @@ public class MainActivity extends AppCompatActivity {
         imgcardPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, UserProfiles.class);
-                startActivity(intent);
+                Intent call_userprofile = new Intent(MainActivity.this, UserProfiles.class);
+                startActivity(call_userprofile);
             }
         });
         imgcardConfiguracion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, Personalizacion.class);
+                startActivity(intent);
             }
         });
         imgcardAyuda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, Ay_ayuda.class);
+                startActivity(intent);
             }
         });
         imgcardNosotros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, AcercaNosotros.class);
+                startActivity(intent);
             }
         });
     }
