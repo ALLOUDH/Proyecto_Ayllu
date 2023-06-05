@@ -68,6 +68,7 @@ public class ChatGrupo extends AppCompatActivity {
         imgbtn_enviarimagenes = (ImageView) findViewById(R.id.imgbtn_enviarfotosCG);
         imgbtn_call = (ImageView) findViewById(R.id.imgbtn_callGC);
         imgbtn_navigation = (ImageView) findViewById(R.id.imgbtn_settings_GC);
+        edt_escribirmensajes.setTextColor(getColor(R.color.white));
 
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("chat");// Sala de chat (nombre)
@@ -189,5 +190,10 @@ public class ChatGrupo extends AppCompatActivity {
         AlertDialog titulo = alerta.create();
         titulo.setTitle("Advertencia");
         titulo.show();
+    }
+
+    public void call_llamar(View view) {
+            String dial = "tel:+51959933665";
+            startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));
     }
 }

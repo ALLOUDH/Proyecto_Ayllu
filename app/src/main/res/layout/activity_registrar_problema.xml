@@ -123,7 +123,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edtDescripcionRegistrarProblema"
                         android:background="@drawable/bg_cuadros"
-                        android:layout_gravity="top|left"
+                        android:gravity="top"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
                         android:textColor="@color/white" />

@@ -57,14 +57,14 @@ public class MainActivity extends AppCompatActivity {
         imgcardAyuda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ReportarProblema.class);
+                Intent intent = new Intent(MainActivity.this, Ay_ayuda.class);
                 startActivity(intent);
             }
         });
         imgcardNosotros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TermsCondition.class);
+                Intent intent = new Intent(MainActivity.this, AcercaNosotros.class);
                 startActivity(intent);
             }
         });

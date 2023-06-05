@@ -35,34 +35,16 @@ public class ReportarProblema extends AppCompatActivity implements View.OnClickL
         btn_wsp = findViewById(R.id.btn_wsp);
         btn_enviar.setOnClickListener(this);
         dbreference = FirebaseDatabase.getInstance().getReference();
-        boolean installed = appInstaladaOrNot("com.whatsapp");
         edt_descr.setTextColor(Color.WHITE);
 
         btn_wsp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(installed){
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("https://api.whatsapp.com/send?phone="+"+51"+"950703130"));
-                    startActivity(intent);
-                }
-                else{
-                    Toast.makeText(ReportarProblema.this, "Whatsapp no esta instalado en tu dispositivo", Toast.LENGTH_SHORT).show();
-                }
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://api.whatsapp.com/send?phone="+"+51"+"959933665"));
+                startActivity(intent);
             }
         });
-    }
-
-    private boolean appInstaladaOrNot(String url) {
-        PackageManager packageManager = getPackageManager();
-        boolean app_installed;
-        try {
-            packageManager.getPackageInfo(url,PackageManager.GET_ACTIVITIES);
-            app_installed = true;
-        }catch (PackageManager.NameNotFoundException e){
-            app_installed = false;
-        }
-        return app_installed;
     }
 
     @Override

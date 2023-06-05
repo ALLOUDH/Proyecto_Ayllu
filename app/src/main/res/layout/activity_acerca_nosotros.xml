@@ -7,6 +7,12 @@
     tools:context=".TermsCondition"
     android:background="@color/white_decolorated">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -40,43 +46,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="230dp">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/edt_Email_RecoverPass"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="250dp"
-                android:layout_marginRight="30dp"
-                android:text="Bienvenido(a) a nuestra aplicación de búsqueda de equipos de trabajo para proyectos sociales. Estamos comprometidos en proporcionar una plataforma donde los estudiantes puedan unirse y colaborar en la solución de problemas sociales en zonas alejadas de la ciudad.
+                android:orientation="vertical" >
 
-    Nuestra misión es fomentar la participación activa de los jóvenes en el desarrollo de soluciones innovadoras para desafíos sociales. Creemos en el poder de la colaboración y en el impacto positivo que los equipos multidisciplinarios pueden tener en la comunidad.
+                <TextView
+                    android:id="@+id/edt_Email_RecoverPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Bienvenido(a) a nuestra aplicación de búsqueda de equipos de trabajo para proyectos sociales. \n\nEstamos comprometidos en proporcionar una plataforma donde los estudiantes puedan unirse y colaborar en la solución de problemas sociales en zonas alejadas de la ciudad.
 
-    Nuestra aplicación utiliza tecnologías de vanguardia, como el Web Scraping, para recopilar información sobre los problemas sociales existentes en diferentes regiones. De esta manera, proporcionamos a los usuarios una amplia gama de problemas sociales para elegir y en los que trabajar.
+    \n\nNuestra misión es fomentar la participación activa de los jóvenes en el desarrollo de soluciones innovadoras para desafíos sociales. Creemos en el poder de la colaboración y en el impacto positivo que los equipos multidisciplinarios pueden tener en la comunidad.
 
-    Facilitamos la formación de equipos de trabajo al permitir a los estudiantes conectarse con otros compañeros que comparten intereses y pasiones similares. Nuestra plataforma les brinda la oportunidad de colaborar, intercambiar ideas y habilidades, y desarrollar soluciones innovadoras para los problemas sociales identificados.
+    \n\nNuestra aplicación utiliza tecnologías de vanguardia, como el Web Scraping, para recopilar información sobre los problemas sociales existentes en diferentes regiones. De esta manera, proporcionamos a los usuarios una amplia gama de problemas sociales para elegir y en los que trabajar.
 
-    Valoramos la diversidad y la inclusión. Creemos que al reunir a personas con diferentes perspectivas y habilidades, podemos generar ideas más sólidas y soluciones más efectivas. Alentamos la participación de estudiantes de diversas disciplinas, como ingeniería, ciencias sociales, diseño, y cualquier otra área que pueda contribuir a la resolución de problemas sociales.
+    \n\nFacilitamos la formación de equipos de trabajo al permitir a los estudiantes conectarse con otros compañeros que comparten intereses y pasiones similares. Nuestra plataforma les brinda la oportunidad de colaborar, intercambiar ideas y habilidades, y desarrollar soluciones innovadoras para los problemas sociales identificados.
 
-    Nuestra visión es ver cómo nuestros equipos de trabajo transforman comunidades, mejoran la calidad de vida de las personas y generan un impacto duradero en el entorno social.
+    \n\nValoramos la diversidad y la inclusión. Creemos que al reunir a personas con diferentes perspectivas y habilidades, podemos generar ideas más sólidas y soluciones más efectivas. Alentamos la participación de estudiantes de diversas disciplinas, como ingeniería, ciencias sociales, diseño, y cualquier otra área que pueda contribuir a la resolución de problemas sociales.
 
-    ¡Únete a nosotros y se parte del cambio! Juntos, podemos marcar la diferencia en las zonas alejadas de la ciudad y construir un futuro más justo y equitativo para todos.
+    \n\nNuestra visión es ver cómo nuestros equipos de trabajo transforman comunidades, mejoran la calidad de vida de las personas y generan un impacto duradero en el entorno social.
 
-    ¡Gracias por utilizar nuestra aplicación y ser parte de esta importante misión social!
+    \n\n¡Únete a nosotros y se parte del cambio! Juntos, podemos marcar la diferencia en las zonas alejadas de la ciudad y construir un futuro más justo y equitativo para todos.
 
-    El equipo de búsqueda de equipos de trabajo para proyectos sociales"
-                android:textColor="@color/purple_text"
-                android:textSize="20sp"
-                android:textStyle="italic" />
-        </LinearLayout>
-    </ScrollView>
+    \n\n¡Gracias por utilizar nuestra aplicación y ser parte de esta importante misión social!
+
+    \n\nEl equipo de Ayllu"
+                    android:textColor="@color/purple_text"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
