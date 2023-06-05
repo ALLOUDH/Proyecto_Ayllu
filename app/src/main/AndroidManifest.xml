@@ -11,7 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_Ayllu"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MenuReportero"
+            android:exported="false" />
+        <activity
+            android:name=".loginAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".loginReportero"
+            android:exported="false" />
+        <activity
+            android:name=".ElegirRol"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -43,30 +54,22 @@
         <activity
             android:name=".MapsProblema.SeleccionarUbicacionProblema"
             android:exported="true"
-            android:label="@string/title_activity_seleccionar_ubicacion_problema">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="@string/title_activity_seleccionar_ubicacion_problema" />
         <activity
             android:name=".RegistrarProblema.RegistrarProblema"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ReportarProblema"
-            android:exported="false" />
+            android:exported="true"></activity>
         <activity
             android:name=".Grupos"
             android:exported="false" />
         <activity
             android:name=".MostrarCategorias"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ListarProblemas.ListarProblemas"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".profile_user"
             android:exported="false" />
@@ -76,6 +79,11 @@
         <activity
             android:name=".Splash"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".TermsCondition"
@@ -91,21 +99,19 @@
             android:exported="false" />
         <activity
             android:name=".ListarProblemas.ListarProblemasContaminacion"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ListarProblemas.ListarProblemasDelincuencia"
             android:exported="false" />
         <activity
             android:name=".ListarProblemas.ListarProblemasDesigualdad"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

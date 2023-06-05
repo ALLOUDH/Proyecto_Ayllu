@@ -67,9 +67,8 @@
                 android:id="@+id/edtReportarProblema"
                 android:background="@color/pink_rectangle"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:hint="Describe el problema"
-                android:textColorHint="@color/white" />
+                android:textColor="@color/white"
+                android:layout_height="200dp" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <LinearLayout
@@ -79,7 +78,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnEnviar"
+            android:id="@+id/btnEnviarProblema"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_gravity="center"
@@ -138,12 +137,13 @@
             android:textColor="@color/purple_text"
             android:textSize="14sp"
             ></TextView>
-        <ImageView
+        <ImageButton
+            android:id="@+id/imgReportarProblemaWSP"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/whatsapp_icon"
             android:layout_marginHorizontal="10dp"
-            ></ImageView>
+            ></ImageButton>
     </LinearLayout>
 </LinearLayout>

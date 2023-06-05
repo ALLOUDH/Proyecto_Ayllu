@@ -47,7 +47,7 @@
         >
 
         <EditText
-            android:id="@+id/edtCorreoUsuario"
+            android:id="@+id/edtCorreoReportero"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="33dp"
@@ -62,7 +62,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/edtContraseñaUsuario"
+            android:id="@+id/edtContraseñaReportero"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
@@ -78,7 +78,7 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btnIngresarUsuario"
+            android:id="@+id/btnIngresarReportero"
             style="@android:style/Widget.Button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btnRegistrarseUsuario"
+            android:id="@+id/btnRegistrarseReportero"
             style="@android:style/Widget.Button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -109,18 +109,5 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/txtOlvidasteUsuario"
-            android:layout_width="152dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="150dp"
-            android:onClick="llamar_recover_pass_login"
-            android:background="@drawable/edt_line"
-            android:text="Olvidate tu contraseña?"
-            android:textAlignment="center"
-            android:textColor="@color/purple_text" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

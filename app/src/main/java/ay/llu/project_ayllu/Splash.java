@@ -1,7 +1,5 @@
 package ay.llu.project_ayllu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -11,7 +9,8 @@ import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.widget.ImageView;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Splash extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,7 +43,7 @@ public class Splash extends AppCompatActivity implements View.OnClickListener {
         },tiempo);
     }
     public void llamar(){
-        Intent intent = new Intent(Splash.this, Login.class);
+        Intent intent = new Intent(Splash.this, ElegirRol.class);
         startActivity(intent);
     }
 
