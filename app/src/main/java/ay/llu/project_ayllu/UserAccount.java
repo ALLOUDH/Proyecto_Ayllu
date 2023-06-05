@@ -2,7 +2,11 @@ package ay.llu.project_ayllu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.style.BackgroundColorSpan;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,5 +42,27 @@ public class UserAccount extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Carreras_Profesionales, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnCarrerasUA.setAdapter(adapter);
+    }
+
+    public void llamarEliminar(View view){
+        AlertDialog.Builder alerta = new AlertDialog.Builder(UserAccount.this);
+        alerta.setMessage("¿Estas seguro que desea eliminar cuenta?")
+                .setCancelable(false)
+                .setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+//                        Intent report = new Intent(this, MotivoReportar.class);
+//                        startActivity(report);
+                    }
+                })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog titulo = alerta.create();
+        titulo.setTitle("ELIMINAR");
+        titulo.show();
     }
 }

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecoverPass"
-    android:background="@color/white_decolorated">
+    android:background="@color/white_decolorated"
+    tools:context=".RecuperarContrasena.Ay_new_pass">
 
     <ImageView
         android:id="@+id/imageView"
@@ -43,47 +43,56 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <EditText
-            android:id="@+id/edt_Email_RecoverPass"
-            android:layout_marginTop="250dp"
+            android:id="@+id/edtnewpass"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingrese su correo electrónico"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="266dp"
+            android:layout_marginRight="33dp"
             android:background="@drawable/edt_line"
-            android:layout_weight="0.008"
-            />
+            android:hint="INGRESE NUEVA CONTRASEÑA"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textColor="#717171"
+            android:textColorHint="@color/purple_text"
+            android:textSize="16sp" />
+
+
         <EditText
-            android:id="@+id/edt_NroCelular_RecoverPass"
+            android:id="@+id/edtnewpass2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Ingrese su número de celular"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="33dp"
             android:background="@drawable/edt_line"
-            android:layout_weight="0.008"
-            android:layout_marginBottom="70dp"
-            />
+            android:ems="10"
+            android:hint="CONFIRMAR NUEVA CONTRASEÑA"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="#717171"
+            android:textColorHint="@color/purple_text"
+            android:textSize="16sp" />
+
         <Button
-            android:id="@+id/btn_Aceptar_RecoverPass"
-            android:layout_width="250dp"
+            android:id="@+id/btnGuardarPass"
+            style="@android:style/Widget.Button"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/btn_bg"
-            android:text="ACEPTAR"
-            android:textSize="16sp"
+            android:gravity="center"
+            android:onClick="llamar_menu_login"
+            android:text="GUARDAR CAMBIOS"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginBottom="30dp"
-            />
-    </LinearLayout>
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

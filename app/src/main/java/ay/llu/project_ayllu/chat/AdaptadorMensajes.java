@@ -16,8 +16,6 @@ import java.util.Date;
 import java.util.List;
 
 import ay.llu.project_ayllu.R;
-import ay.llu.project_ayllu.chat.HolderMensajes;
-import ay.llu.project_ayllu.chat.MensajeRecibir;
 
 public class AdaptadorMensajes extends RecyclerView.Adapter<HolderMensajes> {
 

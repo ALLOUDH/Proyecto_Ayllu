@@ -28,6 +28,94 @@
         <item>Tecnología Médica - Terapia Fisica y Rehabilitación</item>
         <item>Tecnología Médica - Laboratorio Clínico y Anatomía Patológica</item>
     </string-array>
+    <string-array name="Departamento">
+        <item>Ancash</item>
+        <item>Apurímac</item>
+        <item>Arequipa</item>
+        <item>Ayacucho</item>
+        <item>Cajamarca</item>
+        <item>Cusco</item>
+        <item>Huancavelica</item>
+        <item>Huánuco</item>
+        <item>Ica</item>
+        <item>Junín</item>
+        <item>La Libertad</item>
+        <item>Lambayeque</item>
+        <item>Lima</item>
+        <item>Loreto</item>
+        <item>Madre de Dios</item>
+        <item>Moquegua</item>
+        <item>Pasco</item>
+        <item>Piura</item>
+        <item>Puno</item>
+        <item>San Martín</item>
+        <item>Tacna</item>
+        <item>Tumbes</item>
+        <item>Ucayali</item>
+    </string-array>
+    <string-array name="Provincia">
+        <item>Administración</item>
+        <item>Administración y Finanzas</item>
+        <item>Administración y Marketing</item>
+        <item>Administración y Negocios Internacionales</item>
+        <item>Administración y Recursos Humanos</item>
+        <item>Arquitectura</item>
+        <item>Ciencias y Tecnologías de la Comunicación</item>
+        <item>Contabilidad</item>
+        <item>Derecho</item>
+        <item>Economía</item>
+        <item>Enfermería</item>
+        <item>Ingeniería Ambiental</item>
+        <item>Ingeniería Civil</item>
+        <item>Ingeniería de Minas</item>
+        <item>Ingeniería de Sistemas e Informáticas</item>
+        <item>Ingeniería Eléctrica</item>
+        <item>Ingeniería Electrónica</item>
+        <item>Ingeniería Empresarial</item>
+        <item>Ingeniería Industrial</item>
+        <item>Ingeniería Mecánica</item>
+        <item>Ingeniería Mecatrónica</item>
+        <item>Medicina Humana</item>
+        <item>Odontología</item>
+        <item>Psicología</item>
+        <item>Tecnología Médica - Terapia Fisica y Rehabilitación</item>
+        <item>Tecnología Médica - Laboratorio Clínico y Anatomía Patológica</item>
+    </string-array>
+    <string-array name="Distrito">
+        <item>Administración</item>
+        <item>Administración y Finanzas</item>
+        <item>Administración y Marketing</item>
+        <item>Administración y Negocios Internacionales</item>
+        <item>Administración y Recursos Humanos</item>
+        <item>Arquitectura</item>
+        <item>Ciencias y Tecnologías de la Comunicación</item>
+        <item>Contabilidad</item>
+        <item>Derecho</item>
+        <item>Economía</item>
+        <item>Enfermería</item>
+        <item>Ingeniería Ambiental</item>
+        <item>Ingeniería Civil</item>
+        <item>Ingeniería de Minas</item>
+        <item>Ingeniería de Sistemas e Informáticas</item>
+        <item>Ingeniería Eléctrica</item>
+        <item>Ingeniería Electrónica</item>
+        <item>Ingeniería Empresarial</item>
+        <item>Ingeniería Industrial</item>
+        <item>Ingeniería Mecánica</item>
+        <item>Ingeniería Mecatrónica</item>
+        <item>Medicina Humana</item>
+        <item>Odontología</item>
+        <item>Psicología</item>
+        <item>Tecnología Médica - Terapia Fisica y Rehabilitación</item>
+        <item>Tecnología Médica - Laboratorio Clínico y Anatomía Patológica</item>
+    </string-array>
+    <string-array name="MotivodeReportar">
+        <item>Seleccionar</item>
+        <item>Contenido Inapropiado</item>
+        <item>Faltas de respeto</item>
+        <item>Incumplimiento con las tareas</item>
+        <item>Mal uso de la aplicación</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_seleccionar_ubicacion_problema">SeleccionarUbicacionProblema
@@ -124,4 +212,5 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_mostrar_ubicacion_problema">MostrarUbicacionProblema</string>
+    <string name="title_activity_mostrar_ubicacion">MostrarUbicacion</string>
 </resources>

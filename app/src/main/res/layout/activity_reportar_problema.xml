@@ -139,6 +139,7 @@
             android:textSize="14sp"
             ></TextView>
         <ImageView
+            android:id="@+id/btn_wsp"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"

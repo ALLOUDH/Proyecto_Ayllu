@@ -12,14 +12,16 @@
         android:theme="@style/Theme.Project_Ayllu"
         tools:targetApi="31">
         <activity
-            android:name=".Personalizacion.Personalizacion"
-            android:exported="false">
-        </activity>
-        <activity
-            android:name=".RegistrarProblema.SubirVideos"
+            android:name=".MenuReportero"
             android:exported="false" />
         <activity
-            android:name=".RegistrarProblema.SubirImagenes"
+            android:name=".loginAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".loginReportero"
+            android:exported="false" />
+        <activity
+            android:name=".ElegirRol"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -37,31 +39,51 @@
             android:value="AIzaSyBKUhQCaQPifKFSRDboyUHxKujwqNKyNm8" />
 
         <activity
-            android:name=".MapsProblema.SeleccionarUbicacionProblema"
+            android:name=".InformacionProblema.MostrarUbicacionProblema"
             android:exported="false"
+            android:label="@string/title_activity_mostrar_ubicacion_problema" />
+        <activity
+            android:name=".InformacionProblema.ProblemaInformacion"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarProblema.SubirVideos"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarProblema.SubirImagenes"
+            android:exported="false" />
+        <activity
+            android:name=".MapsProblema.SeleccionarUbicacionProblema"
+            android:exported="true"
             android:label="@string/title_activity_seleccionar_ubicacion_problema" />
         <activity
             android:name=".RegistrarProblema.RegistrarProblema"
-            android:exported="false">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ReportarProblema"
-            android:exported="false">
-        </activity>
+            android:exported="true"></activity>
+        <activity
+            android:name=".Grupos"
+            android:exported="false" />
         <activity
             android:name=".MostrarCategorias"
             android:exported="true" />
         <activity
             android:name=".ListarProblemas.ListarProblemas"
+            android:exported="true" />
+        <activity
+            android:name=".UserProfiles"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarContrasena.Ay_Contra_recup"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarContrasena.Ay_code_verify"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarContrasena.Ay_new_pass"
             android:exported="false" />
         <activity
             android:name=".Splash"
-            android:exported="false" />
-        <activity
-            android:name=".TermsCondition"
-            android:exported="false" />
-        <activity
-            android:name=".SignUp"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,8 +92,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RecoverPass"
+            android:name=".TermsCondition"
             android:exported="false" />
+        <activity
+            android:name=".SignUp"
+            android:exported="false" />
+
         <activity
             android:name=".ListarProblemas.ListarProblemasPobreza"
             android:exported="false" />
@@ -90,6 +116,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+
     </application>
 
 </manifest>
