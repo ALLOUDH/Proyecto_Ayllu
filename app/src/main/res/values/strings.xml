@@ -123,4 +123,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_mostrar_ubicacion_problema">MostrarUbicacionProblema</string>
 </resources>

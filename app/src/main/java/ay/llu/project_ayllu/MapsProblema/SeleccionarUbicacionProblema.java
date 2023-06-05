@@ -80,11 +80,11 @@ public class SeleccionarUbicacionProblema extends FragmentActivity implements On
                         .anchor(0.5F,0.5F));
                 mLat = latLng.latitude;
                 mLong = latLng.longitude;
-                Toast.makeText(SeleccionarUbicacionProblema.this, mLat + "<>" + mLong, Toast.LENGTH_SHORT).show();
                 Intent intent= new Intent(SeleccionarUbicacionProblema.this, RegistrarProblema.class);
                 Bundle punto = new Bundle();
                 punto.putParcelable("lugar", new LatLng(mLat, mLong));
                 intent.putExtras(punto);
+                //finish();
                 startActivity(intent);
                 mMap.clear();
                 crearMarca=false;

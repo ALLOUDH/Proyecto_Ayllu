@@ -47,14 +47,14 @@
         >
 
         <EditText
-            android:id="@+id/edtUserName"
+            android:id="@+id/edtCorreoUsuario"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="33dp"
             android:layout_marginTop="266dp"
             android:layout_marginRight="33dp"
             android:background="@drawable/edt_line"
-            android:hint="Ingresar Usuario"
+            android:hint="Correo Electrónico"
             android:inputType="textPersonName"
             android:padding="8dp"
             android:textColor="#717171"
@@ -62,7 +62,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/edtPassword"
+            android:id="@+id/edtContraseñaUsuario"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
@@ -70,7 +70,7 @@
             android:layout_marginRight="33dp"
             android:background="@drawable/edt_line"
             android:ems="10"
-            android:hint="Ingresar Contraseña"
+            android:hint="Contraseña"
             android:inputType="textPassword"
             android:padding="8dp"
             android:textColor="#717171"
@@ -78,7 +78,7 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btnIniciar"
+            android:id="@+id/btnIngresarUsuario"
             style="@android:style/Widget.Button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btnRegistrar"
+            android:id="@+id/btnRegistrarseUsuario"
             style="@android:style/Widget.Button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txtOlvidaste"
+            android:id="@+id/txtOlvidasteUsuario"
             android:layout_width="152dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

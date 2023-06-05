@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_decolorated"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="134dp"
+        android:gravity="center"
+        android:text="Registrarse"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="367dp"
+        android:layout_height="181dp"
+        android:src="@drawable/logo_ayllu"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/edtCorreoAdministrador"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="266dp"
+            android:layout_marginRight="33dp"
+            android:background="@drawable/edt_line"
+            android:hint="Correo Electrónico"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textColor="#717171"
+            android:textColorHint="@color/purple_text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtContraseñaAdministrador"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="33dp"
+            android:background="@drawable/edt_line"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="#717171"
+            android:textColorHint="@color/purple_text"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnIngresarAdministrador"
+            style="@android:style/Widget.Button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/btn_bg"
+            android:onClick="llamar_menu_login"
+            android:gravity="center"
+            android:text="Ingresar"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
