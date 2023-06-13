@@ -45,6 +45,7 @@ public class RegistrarProblema extends AppCompatActivity {
         edtTituloRegistrarProblema = findViewById(R.id.edtTituloRegistrarProblema);
         edtDescripcionRegistrarProblema = findViewById(R.id.edtDescripcionRegistrarProblema);
         spnCategoria = findViewById(R.id.spnCategoria);
+        btnRegistrarProblema = findViewById(R.id.btnRegistrarProblema);
         btnAñadirImagenes = findViewById(R.id.btnAñadirImagenes);
 
 
@@ -105,8 +106,6 @@ public class RegistrarProblema extends AppCompatActivity {
         String fecha = fechaActual;
         String hora = horaActual;
         String dnireportero = getIntent().getExtras().getString("dnireportero");
-
-        txtdniReportero.setText(dnireportero);
 
         ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora,dnireportero,"","");
 
