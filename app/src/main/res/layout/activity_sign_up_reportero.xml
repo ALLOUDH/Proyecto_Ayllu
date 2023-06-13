@@ -47,81 +47,29 @@
         >
 
         <EditText
-            android:id="@+id/edt_Nombres_SignUp"
+            android:id="@+id/edt_Nombres_SignUpReportero"
             android:layout_marginTop="250dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombres"
+            android:hint="Nombres Completos"
             android:textColorHint="@color/purple_text"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/edt_line"
             />
         <EditText
-            android:id="@+id/edt_Apellidos_SignUp"
+            android:id="@+id/edt_DNI_SignUpReportero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
-            android:hint="Apellidos"
+            android:hint="DNI"
             android:textColorHint="@color/purple_text"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/edt_line"
             />
         <EditText
-            android:id="@+id/edt_NroCelular_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Número de celular"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="30dp">
-
-            <TextView
-                android:id="@+id/txtCarreraPro_SignUp"
-                android:layout_width="304dp"
-                android:layout_height="23dp"
-                android:layout_marginTop="35dp"
-                android:background="@drawable/edt_line"
-                android:text="Carrera Profesional"
-                android:textColor="@color/purple_text"
-                android:textSize="18sp"
-                android:layout_marginRight="40dp"/>
-
-            <Spinner
-                android:id="@+id/Spinner_SignUp"
-                android:layout_width="20dp"
-                android:layout_height="21dp"
-                android:layout_marginStart="-30dp"
-                android:layout_marginTop="36dp"
-                android:background="@drawable/sort_down_icon"
-                android:contextClickable="true"
-                android:overlapAnchor="false"
-                android:spinnerMode="dropdown"
-                android:textColorHint="@color/purple_text" />
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/edt_Email_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:hint="Correo Electronico"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <EditText
-            android:id="@+id/edt_Pass_SignUp"
+            android:id="@+id/edt_Contraseña_SignUpReportero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -132,11 +80,43 @@
             android:background="@drawable/edt_line"
             />
         <EditText
-            android:id="@+id/edt_ConfirmPass_SignUp"
+            android:id="@+id/edt_NroCelular_SignUpReportero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
-            android:hint="Confirmar Contraseña"
+            android:hint="Número de celular"
+            android:textColorHint="@color/purple_text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edt_line"
+            />
+        <Spinner
+            android:id="@+id/spnDepartamento"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/purple_text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edt_line">
+        </Spinner>
+        <EditText
+            android:id="@+id/edtProvinciaReportero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:hint="Provincia"
+            android:textColorHint="@color/purple_text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edt_line"
+            />
+        <EditText
+            android:id="@+id/edtDistritoReportero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:hint="Distrito"
             android:textColorHint="@color/purple_text"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
@@ -144,7 +124,7 @@
             />
 
         <Button
-            android:id="@+id/btn_Registrar_SignUp"
+            android:id="@+id/btn_Registrar_SignUpReportero"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

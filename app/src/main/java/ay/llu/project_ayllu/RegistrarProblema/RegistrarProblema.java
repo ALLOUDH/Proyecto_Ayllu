@@ -26,6 +26,7 @@ import ay.llu.project_ayllu.R;
 
 public class RegistrarProblema extends AppCompatActivity {
     Spinner spnCategoria;
+    TextView txtdniReportero;
     EditText edtTituloRegistrarProblema, edtDescripcionRegistrarProblema;
     Button btnRegistrarProblema;
     String fechaActual, horaActual;
@@ -40,8 +41,8 @@ public class RegistrarProblema extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_problema);
-        Intent intent = getIntent();
-
+        Intent i = getIntent();
+        txtdniReportero = findViewById(R.id.txtdniReportero);
         edtTituloRegistrarProblema = findViewById(R.id.edtTituloRegistrarProblema);
         edtDescripcionRegistrarProblema = findViewById(R.id.edtDescripcionRegistrarProblema);
         spnCategoria = findViewById(R.id.spnCategoria);
@@ -61,7 +62,7 @@ public class RegistrarProblema extends AppCompatActivity {
         horaActual = hora+":"+minutos;
 
 
-        LatLng latLng = intent.getParcelableExtra("lugar");
+        LatLng latLng = i.getParcelableExtra("lugar");
         mlat = latLng.latitude;
         mLong = latLng.longitude;
         lati = String.valueOf(mlat);
@@ -71,17 +72,16 @@ public class RegistrarProblema extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         AylluDatabase = db.getReference();
-        btnRegistrarProblema.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                registrarProblema();
-            }
-        });
+//        btnRegistrarProblema.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                registrarProblema();
+//            }
+//        });
         btnAñadirImagenes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrarProblema.this, Ay_up_images.class);
-                startActivity(intent);
+                registrarProblema();
             }
         });
 
@@ -91,6 +91,8 @@ public class RegistrarProblema extends AppCompatActivity {
         spnCategoria.setAdapter(adapter);
 
     }
+
+
     public void llamaranadirimagen(View view) {
         Intent image = new Intent(this, Ay_up_images.class);
         startActivity(image);
@@ -104,45 +106,54 @@ public class RegistrarProblema extends AppCompatActivity {
         String lon = longi;
         String fecha = fechaActual;
         String hora = horaActual;
+        String dnireportero = getIntent().getExtras().getString("dnireportero");
+
+        txtdniReportero.setText(dnireportero);
+
+        ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora,dnireportero,"","");
 
         if(TextUtils.isEmpty(tituloRegistrarProblema)||TextUtils.isEmpty(descripcionRegistrarProblema)){
             Toast.makeText(this, "Por favor completar todos los campos", Toast.LENGTH_SHORT).show();
             return;
         }
+        AylluDatabase.child("Problemas_Recientes").child(id).setValue(unProblema);
+        Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(this, Ay_up_images.class);
+        String idreportero = dnireportero;
+        String idproblema = id;
+        i.putExtra("dnireportero",idreportero);
+        i.putExtra("idproblema",idproblema);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Toast.makeText(RegistrarProblema.this, idreportero, Toast.LENGTH_SHORT).show();
+        Toast.makeText(RegistrarProblema.this, idproblema, Toast.LENGTH_SHORT).show();
+        startActivity(i);
+        edtTituloRegistrarProblema.setText("");
+        edtDescripcionRegistrarProblema.setText("");
 
         if (categoria.equals("Contaminación")){
-            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
             AylluDatabase.child("Problemas/Contaminación").child(id).setValue(unProblema);
             Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
             edtTituloRegistrarProblema.setText("");
             edtDescripcionRegistrarProblema.setText("");
         }
         if (categoria.equals("Delincuencia")){
-            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
             AylluDatabase.child("Problemas/Delincuencia").child(id).setValue(unProblema);
             Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
             edtTituloRegistrarProblema.setText("");
             edtDescripcionRegistrarProblema.setText("");
         }
         if (categoria.equals("Desigualdad")){
-            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
             AylluDatabase.child("Problemas/Desigualdad").child(id).setValue(unProblema);
             Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
             edtTituloRegistrarProblema.setText("");
             edtDescripcionRegistrarProblema.setText("");
         }
         if (categoria.equals("Pobreza")){
-            ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
             AylluDatabase.child("Problemas/Pobreza").child(id).setValue(unProblema);
             Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
             edtTituloRegistrarProblema.setText("");
             edtDescripcionRegistrarProblema.setText("");
         }
-        ProblemaClase unProblema = new ProblemaClase(id,categoria,tituloRegistrarProblema,descripcionRegistrarProblema,lat,lon,fecha,hora);
-        AylluDatabase.child("Problemas_Recientes").child(id).setValue(unProblema);
-        Toast.makeText(this, "Registro Existoso", Toast.LENGTH_SHORT).show();
-        edtTituloRegistrarProblema.setText("");
-        edtDescripcionRegistrarProblema.setText("");
 
     }
 

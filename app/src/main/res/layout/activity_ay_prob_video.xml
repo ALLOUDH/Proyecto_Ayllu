@@ -1,65 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white_decolorated"
-    tools:context=".Ay_prob_video">
+    android:orientation="vertical"
+    android:background="@color/white_decolorated">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/top_background"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:background="@drawable/logoalaternativo"
+            ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Registrar un Problema"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            ></TextView>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:text="Añadir video"
+                android:layout_marginLeft="20dp"
+                android:textSize="24sp"
+                android:textColor="@color/purple_text">
+            </TextView>
 
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/top_background" />
-
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/logo_ayllu" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="200dp"
+                android:src="@drawable/play_icon2"
+                ></de.hdodenhof.circleimageview.CircleImageView>
 
-                <VideoView
-                    android:id="@+id/videoView"
-                    android:layout_width="350dp"
-                    android:layout_height="400dp"
-                    android:layout_gravity="center"
-                    tools:layout_editor_absoluteX="31dp"  />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingHorizontal="50dp"
+                android:orientation="vertical"
+                >
+                <Button
+                    android:id="@+id/btnSeleccionarVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="20dp"
+                    android:gravity="center"
+                    android:background="@drawable/btn_bg"
+                    android:text="Seleccionar video"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"></Button>
 
-                <ImageView
-                    android:id="@+id/imageView13"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/videoView"
-                    app:layout_constraintStart_toStartOf="@+id/videoView"
-                    app:layout_constraintTop_toTopOf="@+id/videoView"
-                    app:srcCompat="@drawable/play_icon2" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

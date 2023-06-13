@@ -23,7 +23,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="134dp"
         android:gravity="center"
-        android:text="Registrarse"
+        android:text="Iniciar Sesión"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -47,14 +47,14 @@
         >
 
         <EditText
-            android:id="@+id/edtCorreoReportero"
+            android:id="@+id/edtDNIReportero"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="33dp"
             android:layout_marginTop="266dp"
             android:layout_marginRight="33dp"
             android:background="@drawable/edt_line"
-            android:hint="Correo Electrónico"
+            android:hint="DNI"
             android:inputType="textPersonName"
             android:padding="8dp"
             android:textColor="#717171"

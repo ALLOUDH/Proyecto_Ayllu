@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_Ayllu"
         tools:targetApi="31">
-
+        <activity
+            android:name=".SignUpReportero"
+            android:exported="false" />
         <activity
             android:name=".AcercaNosotros"
             android:exported="false" />
@@ -27,6 +28,9 @@
             android:exported="false" />
         <activity
             android:name=".Ay_up_images"
+            android:exported="false" />
+        <activity
+            android:name=".Ay_prob_video"
             android:exported="false" />
         <activity
             android:name=".loginAdministrador"
@@ -87,11 +91,9 @@
         <activity
             android:name=".UserProfiles"
             android:exported="false" />
-
-        <activity android:name=".UserAccount"
-            android:exported="false">
-        </activity>
-
+        <activity
+            android:name=".UserAccount"
+            android:exported="false"></activity>
         <activity
             android:name=".RecuperarContrasena.Ay_Contra_recup"
             android:exported="false" />
@@ -119,11 +121,9 @@
         <activity
             android:name=".ListarProblemas.ListarProblemasPobreza"
             android:exported="false" />
-
-        <activity android:name=".chat.ChatGrupo"
-            android:exported="false">
-        </activity>
-
+        <activity
+            android:name=".chat.ChatGrupo"
+            android:exported="false"></activity>
         <activity
             android:name=".ListarProblemas.ListarProblemasContaminacion"
             android:exported="false" />
@@ -136,11 +136,9 @@
         <activity
             android:name=".Login"
             android:exported="false" />
-
-        <activity android:name=".Personalizacion.Personalizacion"
-            android:exported="false">
-        </activity>
-
+        <activity
+            android:name=".Personalizacion.Personalizacion"
+            android:exported="false"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

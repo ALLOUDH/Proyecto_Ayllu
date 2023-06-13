@@ -10,11 +10,19 @@ public class ProblemaClase {
     private String fecha;
     private String hora;
 
+    private String idReportero;
+
+    private String idFotoProblema;
+
+    private String idVideoProblema;
+
+
+
 
     public ProblemaClase(){
     }
 
-    public ProblemaClase(String id, String categoria, String titulo, String descripcion, String latitud, String longitud, String fecha, String hora) {
+    public ProblemaClase(String id, String categoria, String titulo, String descripcion, String latitud, String longitud, String fecha, String hora, String idReportero, String idFotoProblema, String idVideoProblema) {
         this.id = id;
         this.categoria = categoria;
         this.titulo = titulo;
@@ -23,6 +31,9 @@ public class ProblemaClase {
         this.longitud = longitud;
         this.fecha = fecha;
         this.hora = hora;
+        this.idReportero = idReportero;
+        this.idFotoProblema = idFotoProblema;
+        this.idVideoProblema = idVideoProblema;
     }
 
     public String getId() {
@@ -89,6 +100,30 @@ public class ProblemaClase {
         this.hora = hora;
     }
 
+    public String getIdReportero() {
+        return idReportero;
+    }
+
+    public void setIdReportero(String idReportero) {
+        this.idReportero = idReportero;
+    }
+
+    public String getIdFotoProblema() {
+        return idFotoProblema;
+    }
+
+    public void setIdFotoProblema(String idFotoProblema) {
+        this.idFotoProblema = idFotoProblema;
+    }
+
+    public String getIdVideoProblema() {
+        return idVideoProblema;
+    }
+
+    public void setIdVideoProblema(String idVideoProblema) {
+        this.idVideoProblema = idVideoProblema;
+    }
+
     @Override
     public String toString() {
         return "ProblemaClase{" +
@@ -100,6 +135,9 @@ public class ProblemaClase {
                 ", longitud='" + longitud + '\'' +
                 ", fecha='" + fecha + '\'' +
                 ", hora='" + hora + '\'' +
+                ", idReportero='" + idReportero + '\'' +
+                ", idFotoProblema='" + idFotoProblema + '\'' +
+                ", idVideoProblema='" + idVideoProblema + '\'' +
                 '}';
     }
 }

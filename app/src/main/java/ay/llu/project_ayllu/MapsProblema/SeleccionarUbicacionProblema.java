@@ -39,6 +39,7 @@ public class SeleccionarUbicacionProblema extends FragmentActivity implements On
         binding = ActivitySeleccionarUbicacionProblemaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -69,6 +70,7 @@ public class SeleccionarUbicacionProblema extends FragmentActivity implements On
         }
 
         mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+            String dnireportero = getIntent().getExtras().getString("dnireportero");
             @Override
             public void onMapLongClick(LatLng latLng) {
                 crearMarca=true;
@@ -81,6 +83,8 @@ public class SeleccionarUbicacionProblema extends FragmentActivity implements On
                 mLat = latLng.latitude;
                 mLong = latLng.longitude;
                 Intent intent= new Intent(SeleccionarUbicacionProblema.this, RegistrarProblema.class);
+                String idreportero = dnireportero;
+                intent.putExtra("dnireportero", idreportero);
                 Bundle punto = new Bundle();
                 punto.putParcelable("lugar", new LatLng(mLat, mLong));
                 intent.putExtras(punto);

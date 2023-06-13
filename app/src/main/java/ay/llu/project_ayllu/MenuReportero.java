@@ -23,10 +23,14 @@ public class MenuReportero extends AppCompatActivity {
         imgcardAyudaReportero = findViewById(R.id.imgcardAyudaReportero);
         imgcardNosotrosReportero = findViewById(R.id.imgcardNosotrosReportero);
 
+        String dnireportero = getIntent().getExtras().getString("dnireportero");
+
         imgcardRegistrarProblemaSocial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuReportero.this, SeleccionarUbicacionProblema.class);
+                String idreportero = dnireportero;
+                intent.putExtra("dnireportero", idreportero);
                 startActivity(intent);
             }
         });

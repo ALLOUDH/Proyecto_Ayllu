@@ -51,6 +51,8 @@
                     android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
+                    android:textColor="@color/purple_text"
+                    android:textColorHint="@color/purple_text"
                     android:background="@drawable/edt_line">
                 </Spinner>
             </LinearLayout>
@@ -84,7 +86,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edtTituloRegistrarProblema"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:background="@drawable/bg_cuadros"
                         android:textColor="@color/white" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -125,7 +127,7 @@
                         android:background="@drawable/bg_cuadros"
                         android:gravity="top"
                         android:layout_width="match_parent"
-                        android:layout_height="110dp"
+                        android:layout_height="180dp"
                         android:textColor="@color/white" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
@@ -140,6 +142,15 @@
                     android:layout_height="wrap_content"
                     android:gravity="center|top"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txtdniReportero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="DNI"
+                        android:textColor="@color/purple_text"
+                        android:textSize="18dp"
+                        ></TextView>
                     <ImageButton
                         android:id="@+id/btnAñadirImagenes"
                         android:layout_width="60dp"

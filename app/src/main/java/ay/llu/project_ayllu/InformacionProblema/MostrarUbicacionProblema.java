@@ -68,7 +68,7 @@ public class MostrarUbicacionProblema extends FragmentActivity implements OnMapR
         }
         CameraPosition cameraPosition = CameraPosition.builder().target(destino).zoom(17).build();
         mMap.addMarker( new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.marcador))
-                .title("Ubicación Porblema")
+                .title("Ubicación Problema")
                 .position(destino)
                 .anchor(0.5F,0.5F));
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
