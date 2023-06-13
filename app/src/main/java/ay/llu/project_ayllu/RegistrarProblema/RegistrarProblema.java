@@ -42,11 +42,9 @@ public class RegistrarProblema extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_problema);
         Intent i = getIntent();
-        txtdniReportero = findViewById(R.id.txtdniReportero);
         edtTituloRegistrarProblema = findViewById(R.id.edtTituloRegistrarProblema);
         edtDescripcionRegistrarProblema = findViewById(R.id.edtDescripcionRegistrarProblema);
         spnCategoria = findViewById(R.id.spnCategoria);
-        btnRegistrarProblema = findViewById(R.id.btnRegistrarProblema);
         btnAñadirImagenes = findViewById(R.id.btnAñadirImagenes);
 
 
