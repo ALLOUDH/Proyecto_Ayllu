@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import ay.llu.project_ayllu.ListarProblemas.ListarProblemasRecientesAdministrador;
+import ay.llu.project_ayllu.ListarProblemas.ListarProblemasValoradosAdministrdor;
 
 public class MenuAdministrador extends AppCompatActivity {
     ImageView imgcardProblemasRecientesAdministrador,imgcardProblemasValorados,imgcardPerfiles,imgcardGruposConformados;
@@ -31,7 +32,8 @@ public class MenuAdministrador extends AppCompatActivity {
         imgcardProblemasValorados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MenuAdministrador.this, ListarProblemasValoradosAdministrdor.class);
+                startActivity(intent);
             }
         });
         imgcardPerfiles.setOnClickListener(new View.OnClickListener() {
