@@ -86,6 +86,7 @@ public class Ay_up_images extends AppCompatActivity {
     private void subirImagen() {
         String idproblema = getIntent().getExtras().getString("idproblema");
         String dnireportero = getIntent().getExtras().getString("dnireportero");
+        String idcategoria = getIntent().getExtras().getString("idcategoria");
         if(imgUri !=null)
         {
             Toast.makeText(this, "Subiendo Imagen", Toast.LENGTH_SHORT).show();
@@ -102,15 +103,18 @@ public class Ay_up_images extends AppCompatActivity {
                     mStorage.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
-                            AylluDatabase.child("Problemas_Recientes").child(idproblema).child("idFotoProblema").setValue(uri.toString());
+                            AylluDatabase.child("Problemas/").child(idcategoria).child(idproblema).child("idFotoProblema").setValue(uri.toString());
+                            AylluDatabase.child("Problemas_Recientes/").child(idproblema).child("idFotoProblema").setValue(uri.toString());
                             Toast.makeText(Ay_up_images.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
                             imgUri=null;
                             muploadButton.setImageURI(null);
                             Intent i = new Intent(Ay_up_images.this, Ay_prob_video.class);
                             String idreportero = dnireportero;
                             String idproblema1 = idproblema;
+                            String idcatego = idcategoria;
                             i.putExtra("dnireportero", idreportero);
                             i.putExtra("idproblema", idproblema1);
+                            i.putExtra("idcategoria", idcatego);
                             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(i);
                         }

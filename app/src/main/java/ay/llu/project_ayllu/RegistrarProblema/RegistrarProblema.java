@@ -45,7 +45,6 @@ public class RegistrarProblema extends AppCompatActivity {
         edtTituloRegistrarProblema = findViewById(R.id.edtTituloRegistrarProblema);
         edtDescripcionRegistrarProblema = findViewById(R.id.edtDescripcionRegistrarProblema);
         spnCategoria = findViewById(R.id.spnCategoria);
-        btnRegistrarProblema = findViewById(R.id.btnRegistrarProblema);
         btnAñadirImagenes = findViewById(R.id.btnAñadirImagenes);
 
 
@@ -118,11 +117,14 @@ public class RegistrarProblema extends AppCompatActivity {
         Intent i = new Intent(this, Ay_up_images.class);
         String idreportero = dnireportero;
         String idproblema = id;
+        String categ = categoria;
         i.putExtra("dnireportero",idreportero);
         i.putExtra("idproblema",idproblema);
+        i.putExtra("idcategoria",categ);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Toast.makeText(RegistrarProblema.this, idreportero, Toast.LENGTH_SHORT).show();
         Toast.makeText(RegistrarProblema.this, idproblema, Toast.LENGTH_SHORT).show();
+        Toast.makeText(RegistrarProblema.this, categ, Toast.LENGTH_SHORT).show();
         startActivity(i);
         edtTituloRegistrarProblema.setText("");
         edtDescripcionRegistrarProblema.setText("");

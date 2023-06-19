@@ -15,18 +15,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import ay.llu.project_ayllu.InformacionProblema.ProblemaInformacion;
+import ay.llu.project_ayllu.InformacionProblema.ProblemaInformacionAdministrador;
 import ay.llu.project_ayllu.R;
 import ay.llu.project_ayllu.RegistrarProblema.ProblemaClase;
 
-public class ProblemaAdapterReportero extends ArrayAdapter<ProblemaClase> {
+public class ProblemaAdapterAdministradorR extends ArrayAdapter<ProblemaClase> {
     private List<ProblemaClase> listProblema;
 
     private List<String> textList;
     private Context pcontext;
     private int resourcelayaout;
 
-    public ProblemaAdapterReportero(@NonNull Context context, int resource, List<ProblemaClase> objects){
+    public ProblemaAdapterAdministradorR(@NonNull Context context, int resource, List<ProblemaClase> objects){
         super(context, resource, objects);
         this.listProblema = objects;
         this.pcontext = context;
@@ -50,18 +50,16 @@ public class ProblemaAdapterReportero extends ArrayAdapter<ProblemaClase> {
 
         ProblemaClase problema = listProblema.get(position);
 
-        TextView txtTitulo,txtDescripcion,txtFecha,txtHora,txtPrioridad;
+        TextView txtTitulo,txtDescripcion,txtFecha,txtPrioridad;
 
         txtTitulo = view.findViewById(R.id.txtTitulo);
         txtDescripcion = view.findViewById(R.id.txtDescripcion);
         txtFecha = view.findViewById(R.id.txtFecha);
-        txtHora = view.findViewById(R.id.txtHora);
         txtPrioridad = view.findViewById(R.id.txtPrioridad);
 
         txtTitulo.setText(problema.getTitulo());
         txtDescripcion.setText(problema.getDescripcion());
         txtFecha.setText(problema.getFecha());
-        txtHora.setText(problema.getHora());
         txtPrioridad.setText(prioridad);
 
         String idreportero = problema.getIdReportero();
@@ -75,7 +73,7 @@ public class ProblemaAdapterReportero extends ArrayAdapter<ProblemaClase> {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(view.getContext(), ProblemaInformacion.class);
+                Intent i = new Intent(view.getContext(), ProblemaInformacionAdministrador.class);
                 i.putExtra("titulo",titulo);
                 i.putExtra("descripcion",descripcion);
                 i.putExtra("latitud",latitud);
@@ -85,6 +83,7 @@ public class ProblemaAdapterReportero extends ArrayAdapter<ProblemaClase> {
                 i.putExtra("idproblema",idproblema);
                 // i.putExtra("titulo",problema.getFecha());
                 //Toast.makeText(ProblemaAdapter.this.getContext(), fecha, Toast.LENGTH_SHORT).show();
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 view.getContext().startActivity(i);
             }
 

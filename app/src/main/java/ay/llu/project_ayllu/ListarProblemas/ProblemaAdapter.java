@@ -62,6 +62,8 @@ public class ProblemaAdapter extends ArrayAdapter<ProblemaClase>{
         txtFecha.setText(problema.getFecha());
         txtPrioridad.setText(prioridad);
 
+        String idreportero = problema.getIdReportero();
+        String idproblema = problema.getId();
         String titulo= problema.getTitulo();
         String descripcion = problema.getDescripcion();
         String latitud = problema.getLatitud();
@@ -77,8 +79,11 @@ public class ProblemaAdapter extends ArrayAdapter<ProblemaClase>{
                 i.putExtra("latitud",latitud);
                 i.putExtra("longitud",longitud);
                 i.putExtra("fecha",fecha);
+                i.putExtra("dnireportero",idreportero);
+                i.putExtra("idproblema",idproblema);
                 // i.putExtra("titulo",problema.getFecha());
                 //Toast.makeText(ProblemaAdapter.this.getContext(), fecha, Toast.LENGTH_SHORT).show();
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 view.getContext().startActivity(i);
             }
 
