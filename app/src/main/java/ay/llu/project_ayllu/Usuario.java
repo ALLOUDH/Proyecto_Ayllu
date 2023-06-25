@@ -1,26 +1,17 @@
 package ay.llu.project_ayllu;
 
 public class Usuario {
-    String id,nombre,apellido,correo,celular,carreraprof;
+    String nombre,apellido,correo,celular,carreraprof;
 
     public Usuario() {
     }
 
-    public Usuario(String id, String nombre, String apellido, String correo, String celular, String carreraprof) {
-        this.id = id;
+    public Usuario(String nombre, String apellido, String correo, String celular, String carreraprof) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.celular = celular;
         this.carreraprof = carreraprof;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -66,12 +57,11 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "id='" + id + '\'' +
-                ", nombre='" + nombre + '\'' +
+                "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
+                ", correo='" + correo + '\'' +
                 ", celular='" + celular + '\'' +
                 ", carreraprof='" + carreraprof + '\'' +
-                ", correo='" + correo + '\'' +
                 '}';
     }
 }

@@ -77,9 +77,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     for (DataSnapshot ds: snapshot.getChildren()){
-                        String id = ds.getKey();
+                        String idlist = ds.getKey();
                         String nombre = ds.child("nombre").getValue().toString();
-                        carreras.add(new Carreras(id, nombre));
+                        carreras.add(new Carreras(idlist, nombre));
                     }
                     ArrayAdapter<Carreras> arrayAdapter = new ArrayAdapter<>(SignUp.this, android.R.layout.simple_dropdown_item_1line, carreras);
                     spinCarreras.setAdapter(arrayAdapter);
@@ -108,11 +108,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        String id = auth.getCurrentUser().getUid();
         String nombreUser = edtNombreSU.getText().toString().trim();
         String apellidoUser = edtApellidoSU.getText().toString().trim();
         String numeroCeluUser = edtNumeroCel.getText().toString().trim();
-        String carreraUser = txtCarreraProf.getText().toString().trim();
         String correoUser = edtCorreoSU.getText().toString().trim();
         String contraUser = edtContraSU.getText().toString().trim();
         String confcontraUser = edtConfirmPassSU.getText().toString().trim();
@@ -139,24 +137,30 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             Toast.makeText(this, "Usted necesita rellenar todos los campos", Toast.LENGTH_SHORT).show();
         }else{
             if (confcontraUser.equals(contraUser)){
-                registrarUsuario(id,nombreUser,apellidoUser,correoUser,numeroCeluUser,carreraUser,contraUser);
+                crearcuentafb();
             }else{
                 Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private void registrarUsuario(String id, String  nombreUser, String apellidoUser, String correoUser, String numeroCeluUser,String carreraUser,String contraUser) {
+    private void crearcuentafb(){
+        String nombreUser = edtNombreSU.getText().toString().trim();
+        String apellidoUser = edtApellidoSU.getText().toString().trim();
+        String numeroCeluUser = edtNumeroCel.getText().toString().trim();
+        String carreraUser = txtCarreraProf.getText().toString().trim();
+        String correoUser = edtCorreoSU.getText().toString().trim();
+        String contraUser = edtContraSU.getText().toString().trim();
         auth.createUserWithEmailAndPassword(correoUser,contraUser).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Usuario usuario = new Usuario(id,nombreUser,apellidoUser,correoUser,numeroCeluUser,carreraUser);
-                    Ayllu.child("Usuarios").child(id).setValue(usuario);
+                    String id = auth.getCurrentUser().getUid();
+                    registrarUsuario(id,nombreUser,apellidoUser,correoUser,numeroCeluUser,carreraUser,contraUser);
                     Toast.makeText(SignUp.this,"Se ha creado su cuenta exitosamente!", Toast.LENGTH_SHORT).show();
                     Intent call_login = new Intent(SignUp.this, Login.class);
                     startActivity(call_login);
-                }else {
+                }else{
                     if (task.getException() instanceof FirebaseAuthUserCollisionException){
                         Toast.makeText(SignUp.this,"El usuario ya existe", Toast.LENGTH_SHORT).show();
                     }else{
@@ -165,5 +169,11 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 }
             }
         });
+    }
+
+    private void registrarUsuario(String id, String nombreUser, String apellidoUser, String correoUser, String numeroCeluUser,String carreraUser,String contraUser) {
+
+                    Usuario usuario = new Usuario(nombreUser,apellidoUser,correoUser,numeroCeluUser,carreraUser);
+                    Ayllu.child("Usuarios").child(id).setValue(usuario);
     }
 }

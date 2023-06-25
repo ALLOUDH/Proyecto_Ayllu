@@ -73,28 +73,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
-            android:hint="Número de celular"
+            android:hint="Numero de celular"
             android:textColorHint="@color/purple_text"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/edt_line"
             />
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="30dp">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/txtCarreraPro_SignUp"
-                android:layout_width="304dp"
-                android:layout_height="23dp"
-                android:layout_marginTop="35dp"
-                android:background="@drawable/edt_line"
-                android:text="Carrera Profesional"
-                android:textColor="@color/purple_text"
-                android:textSize="18sp"
-                android:layout_marginRight="40dp"/>
 
             <Spinner
                 android:id="@+id/Spinner_SignUp"
@@ -106,8 +94,27 @@
                 android:contextClickable="true"
                 android:overlapAnchor="false"
                 android:spinnerMode="dropdown"
-                android:textColorHint="@color/purple_text" />
-        </LinearLayout>
+                android:textColorHint="@color/purple_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtCarreraPro_SignUp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtCarreraPro_SignUp"
+                android:layout_width="304dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edt_line"
+                android:text="Carrera Profesional"
+                android:textColor="@color/purple_text"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Spinner_SignUp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <EditText
             android:id="@+id/edt_Email_SignUp"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_decolorated"
-    tools:context=".SignUp">
+    tools:context=".UserAccount">
 
     <ImageView
         android:id="@+id/imageView"
@@ -45,239 +45,185 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="230dp"
-        android:layout_marginBottom="70dp"
-        >
+        android:layout_marginBottom="70dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre"
-            android:textColor="@color/purple_text"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="30dp"
-            />
-
-        <EditText
-            android:layout_marginTop="5dp"
-            android:id="@+id/edt_Nombres_UserAccount"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Alan"
-            android:alpha="0.5"
-            android:textSize="20sp"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp">
 
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Apellidos"
-            android:textColor="@color/purple_text"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="30dp"
-            />
-        <EditText
-            android:id="@+id/edt_Apellidos_UserAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint="Brito Delgado"
-            android:alpha="0.5"
-            android:textSize="20sp"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ubicación"
-            android:textColor="@color/purple_text"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="30dp"
-            />
-        <EditText
-            android:id="@+id/edt_Ubicación_UserAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint="Huancayo - Junin"
-            android:textSize="20sp"
-            android:alpha="0.5"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nro de Celular"
-            android:textColor="@color/purple_text"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="30dp"
-            />
-        <EditText
-            android:id="@+id/edt_NroCelular_UserAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint="999999999"
-            android:textSize="20sp"
-            android:alpha="0.5"
-            android:textColorHint="@color/purple_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/edt_line"
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textColor="@color/purple_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                />
 
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Carrera Profesional"
-            android:textColor="@color/purple_text"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="30dp"
-            />
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <Spinner
-                android:id="@+id/Spinner_UserAccount"
-                android:layout_width="20dp"
-                android:layout_height="21dp"
-                android:layout_marginStart="-30dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/sort_down_icon"
-                android:contextClickable="true"
-                android:overlapAnchor="false"
-                android:spinnerMode="dropdown"
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/txtv_Nombres_UserAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:alpha="0.7"
+                android:textSize="20sp"
                 android:textColorHint="@color/purple_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edt_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apellidos"
+                android:textColor="@color/purple_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                />
+            <TextView
+                android:id="@+id/txtv_Apellidos_UserAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Apellidos"
+                android:alpha="0.7"
+                android:textSize="20sp"
+                android:textColorHint="@color/purple_text"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edt_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp">
+
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carrera Profesional"
+                android:textColor="@color/purple_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                />
 
             <TextView
                 android:id="@+id/txt_CarreraPro_UserAccount"
-                android:layout_width="302dp"
-                android:layout_height="21dp"
-                android:layout_marginTop="5dp"
-                android:alpha="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alpha="0.7"
                 android:background="@drawable/edt_line"
-                android:text="Ing. Civil"
+                android:text="Carrera Profesional"
                 android:textColor="@color/purple_text"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/Spinner_UserAccount"
-                app:layout_constraintHorizontal_bias="0.526"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                android:textSize="20sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Correo Electrónico"
-            android:textColor="@color/purple_text"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="30dp"
-            android:layout_marginBottom="3dp"
-            />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp">
 
-            <EditText
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nro de Celular"
+                android:textColor="@color/purple_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/txtv_NroCelular_UserAccount"
+                    android:layout_width="328dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/edt_line"
+                    android:hint="Nro de Celular"
+                    android:textColorHint="@color/purple_text"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/edit_icon" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo Electrónico"
+                android:textColor="@color/purple_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="3dp"
+                />
+
+            <TextView
                 android:id="@+id/edt_Email_UserAccount"
-                android:layout_width="315dp"
+                android:layout_width="match_parent"
                 android:layout_height="23dp"
-                android:layout_marginStart="28dp"
-                android:alpha="0.5"
+                android:alpha="0.7"
                 android:background="@drawable/edt_line"
-                android:hint="alambrdelga@gmail.com"
+                android:hint="Correo Electronico"
                 android:textColorHint="@color/purple_text"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/img_edit_email_UserAccount"
-                app:layout_constraintHorizontal_bias="0.133"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
 
-            <ImageView
-                android:id="@+id/img_edit_email_UserAccount"
-                android:layout_width="25dp"
-                android:layout_height="19dp"
-                android:layout_marginEnd="28dp"
-                android:src="@drawable/edit_icon"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contraseña"
-            android:textColor="@color/purple_text"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="30dp"
-            />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/edt_Pass_UserAccount"
-                android:layout_width="317dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="28dp"
-                android:alpha="0.5"
-                android:background="@drawable/edt_line"
-                android:hint="********"
-                android:textColorHint="@color/purple_text"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView2"
-                app:layout_constraintHorizontal_bias="0.09"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="25dp"
-                android:layout_height="19dp"
-                android:layout_marginEnd="28dp"
-                android:src="@drawable/edit_icon"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <Button
@@ -313,6 +259,7 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:onClick="llamar_guardar_datos_UA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"

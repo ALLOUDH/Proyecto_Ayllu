@@ -23,7 +23,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="134dp"
         android:gravity="center"
-        android:text="Iniciar Sesión"
+        android:text="Registrarse"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"

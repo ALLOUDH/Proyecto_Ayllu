@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="380dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/pink_button"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_confirm_card"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Ingrese su contraseña"
+            android:background="@drawable/bg_text"
+            android:paddingStart="10dp"
+            android:textColorHint="@color/purple_text"/>
+
+        <Button
+            android:id="@+id/btn_confirmar_card"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Confirmar"
+            android:background="@drawable/bg_text"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:textColor="@color/purple_text"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

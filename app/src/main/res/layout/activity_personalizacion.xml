@@ -31,7 +31,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="134dp"
                 android:gravity="center"
-                android:text="Personalización"
+                android:text="Ajustes"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -59,8 +59,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn_bg2"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -68,15 +70,14 @@
                     android:text="Modo Oscuro"
                     android:textColor="@color/purple_text"
                     android:textSize="24sp"
-                    android:layout_marginRight="100dp"
-                    android:layout_marginLeft="20dp"
-                    android:gravity="center"/>
+                    android:layout_marginLeft="20dp"/>
 
                 <Switch
                     android:id="@+id/switch_custom"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="set_night">
+                    android:onClick="set_night"
+                    android:layout_marginRight="20dp">
                 </Switch>
 
             </LinearLayout>
@@ -85,36 +86,51 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn_bg2"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="30dp"
                     android:text="Seleccionar Idioma"
                     android:textColor="@color/purple_text"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"/>
 
                 <ImageView
-                    android:layout_width="75dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/language_icon" />
+                    android:src="@drawable/language_icon"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn_bg2"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seleccionar Fuente"
+                    android:text="Mi cuenta"
                     android:textColor="@color/purple_text"
                     android:textSize="24sp"
-                    android:layout_marginLeft="70dp"/>
+                    android:layout_marginLeft="20dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_perfil"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginRight="20dp"
+                    android:onClick="llamar_mi_cuenta"/>
 
             </LinearLayout>
 

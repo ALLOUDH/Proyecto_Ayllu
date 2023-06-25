@@ -16,33 +16,37 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import ay.llu.project_ayllu.RecuperarContrasena.Ay_Contra_recup;
 
 public class Login extends AppCompatActivity {
-    EditText edtName, edtPass;
+    EditText edtCorreo, edtPass;
 
     TextView txtOlvidaste;
 
     Button btnIniciar;
-    FirebaseAuth mAuth;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        mAuth=FirebaseAuth.getInstance();
-        edtName=findViewById(R.id.edtCorreoUsuario);
+        auth = FirebaseAuth.getInstance();
+        edtCorreo=findViewById(R.id.edtCorreoUsuario);
         edtPass=findViewById(R.id.edtContraseñaUsuario);
         txtOlvidaste=findViewById(R.id.txtOlvidasteUsuario);
         btnIniciar=findViewById(R.id.btnIngresarUsuario);
-        edtName.setTextColor(getColor(R.color.purple_text));
+        edtCorreo.setTextColor(getColor(R.color.purple_text));
         edtPass.setTextColor(getColor(R.color.purple_text));
+
 
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String emailUser = edtName.getText().toString().trim();
+                String emailUser = edtCorreo.getText().toString().trim();
                 String passUser = edtPass.getText().toString().trim();
                 if (emailUser.isEmpty()&&passUser.isEmpty()){
                     Toast.makeText(Login.this, "Ingresar los datos", Toast.LENGTH_SHORT).show();
@@ -53,16 +57,18 @@ public class Login extends AppCompatActivity {
             }
         });
 
+
     }
 
     private void LoginUser(String emailUser, String passUser) {
-        mAuth.signInWithEmailAndPassword(emailUser,passUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        auth.signInWithEmailAndPassword(emailUser,passUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     finish();
-                    startActivity(new Intent(Login.this,MainActivity.class));
-                    Toast.makeText(Login.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Login.this, MainActivity.class);
+                    startActivity(i);
+                    Toast.makeText(Login.this,"Bienvenido", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(Login.this, "Error, correo o contraseña incorrecta", Toast.LENGTH_SHORT).show();
                 }
