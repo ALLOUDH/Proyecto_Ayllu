@@ -1,5 +1,7 @@
 package ay.llu.project_ayllu.InformacionProblema;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,7 +22,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import ay.llu.project_ayllu.ElegirRol;
+import ay.llu.project_ayllu.ListarProblemas.ListarProblemasRecientesAdministrador;
 import ay.llu.project_ayllu.R;
+import ay.llu.project_ayllu.UserAccount;
 
 public class ProblemaInformacionAdministrador extends AppCompatActivity {
     TextView txtTituloMostrarProblema,txtFechaMostrarProblema,txtDescripcionMostrarProblema,txtUbicacionMostrarProblema;
@@ -55,6 +60,39 @@ public class ProblemaInformacionAdministrador extends AppCompatActivity {
         txtTituloMostrarProblema.setText(titulo);
         txtFechaMostrarProblema.setText(fecha);
         txtDescripcionMostrarProblema.setText(descripcion);
+
+        imgBorrarProblema.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlertDialog.Builder alerta = new AlertDialog.Builder(ProblemaInformacionAdministrador.this);
+                alerta.setMessage("¿Estas seguro que desea eliminar el problema reportado?")
+                        .setCancelable(false)
+                        .setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                eliminar_problemas();
+                            }
+
+                            private void eliminar_problemas() {
+                                AylluDatabase.child("Problemas_Recientes").child(idproblema).removeValue();
+                                Intent call_roles = new Intent(ProblemaInformacionAdministrador.this, ListarProblemasRecientesAdministrador.class);
+                                startActivity(call_roles);
+                                Toast.makeText(ProblemaInformacionAdministrador.this, "El problema reportado ha sido eliminado!", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog titulo = alerta.create();
+                titulo.setTitle("ELIMINAR");
+                titulo.show();
+
+            }
+        });
 
         imgUbicacionMostrarProblema.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -47,6 +47,7 @@ public class PerfilesUsuariosAdapter extends ArrayAdapter<Usuario> {
         txtNombre.setText(perfil.getNombre());
         txtCorreo.setText(perfil.getCorreo());
 
+        String iduser = perfil.getIduser();
         String nombre = perfil.getNombre();
         String apellido = perfil.getApellido();
         String celular= perfil.getCelular();
@@ -57,6 +58,7 @@ public class PerfilesUsuariosAdapter extends ArrayAdapter<Usuario> {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(view.getContext(), PerfilInformacion.class);
+                i.putExtra("iduser",iduser);
                 i.putExtra("nombre",nombre);
                 i.putExtra("apellido",apellido);
                 i.putExtra("celular",celular);
