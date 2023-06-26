@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_decolorated">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/top_background"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+            android:background="@drawable/logoalaternativo"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            ></ImageView>
+        <TextView
+            android:id="@+id/txtTituloMostrarProblema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:text="Preguntas frecuentes"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            ></TextView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="1) ¿Cómo soluciono un error de 'pantalla en blanco' al abrir la aplicación?"
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:justificationMode="inter_word"
+                    android:text="- Cierra completamente la aplicación y vuelve a abrirla.
+                                  \n- Reinicia tu dispositivo y vuelve a intentarlo.
+                                  \n- Asegúrate de tener la versión más reciente de la aplicación instalada.
+                                  \n- Borra la caché de la aplicación desde la configuración del dispositivo."
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    ></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="2) La aplicación se congela o se bloquea constantemente. ¿Qué debo hacer?"
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:justificationMode="inter_word"
+                    android:text="- Reinicia tu dispositivo y vuelve a abrir la aplicación.
+                                  \n- Asegúrate de tener suficiente espacio de almacenamiento disponible en tu dispositivo.
+                                  \n- Actualiza la aplicación a la última versión disponible.
+                                  \n- Intenta desinstalar y volver a instalar la aplicación."
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    ></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="3) ¿Por qué no puedo cargar contenido o archivos en la aplicación?"
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:justificationMode="inter_word"
+                    android:text="- Verifica tu conexión a internet para asegurarte de que estás conectado.
+                                  \n- Comprueba si la aplicación tiene permisos adecuados para acceder a los archivos o contenido.
+                                  \n- Asegúrate de que los archivos o contenido que intentas cargar cumplen con los requisitos y formatos admitidos por la aplicación."
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    ></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="4) La aplicación se cierra de forma inesperada. ¿Cómo puedo resolver este problema?"
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:justificationMode="inter_word"
+                    android:text="- Asegúrate de tener la versión más reciente de la aplicación instalada.
+                                 \n- Reinicia tu dispositivo y vuelve a abrir la aplicación.
+                                 \n- Si el problema persiste, intenta desinstalar y volver a instalar la aplicación.
+                                 \n- Consulta si hay actualizaciones de software disponibles para tu dispositivo y aplícalas si es necesario."
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    ></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="5) ¿Cómo puedo solucionar problemas de conectividad con la aplicación?"
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:justificationMode="inter_word"
+                    android:text="- Verifica tu conexión a internet para asegurarte de que estás conectado.
+                                  \n- Intenta reiniciar tu enrutador o cambiar a una conexión de red diferente.
+                                  \n- Comprueba si otras aplicaciones o servicios en tu dispositivo tienen problemas de conectividad.
+                                  \n-  Si el problema persiste, ponte en contacto con tu proveedor de servicios de internet para obtener asistencia."
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    ></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="6) ¿Cómo puedo recuperar datos perdidos o eliminar datos almacenados en la aplicación?"
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:justificationMode="inter_word"
+                    android:text="- Consulta si la aplicación tiene una función de copia de seguridad o sincronización en la nube para recuperar datos perdidos.
+                                  \n- Verifica si la aplicación guarda automáticamente copias de seguridad locales y si se pueden restaurar.
+                                  \n- Si deseas eliminar datos almacenados en la aplicación, busca en la configuración de la aplicación una opción para borrar datos o restablecer la configuración predeterminada."
+                    android:textColor="@color/purple_text"
+                    android:textSize="18dp"
+                    ></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

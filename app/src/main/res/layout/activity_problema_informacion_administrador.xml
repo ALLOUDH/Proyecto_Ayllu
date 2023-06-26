@@ -147,9 +147,9 @@
                     ></TextView>
                 <ImageView
                     android:id="@+id/imgUbicacionMostrarProblema"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:srcCompat="@drawable/maps_icon" />
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    app:srcCompat="@drawable/ic_maps" />
 
             </LinearLayout>
 

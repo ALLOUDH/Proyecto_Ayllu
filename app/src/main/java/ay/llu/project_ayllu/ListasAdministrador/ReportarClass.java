@@ -1,4 +1,4 @@
-package ay.llu.project_ayllu;
+package ay.llu.project_ayllu.ListasAdministrador;
 
 public class ReportarClass {
     String id;

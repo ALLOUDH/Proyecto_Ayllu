@@ -85,6 +85,7 @@
 
     \n\nEl equipo de Ayllu"
                     android:textColor="@color/purple_text"
+                    android:justificationMode="inter_word"
                     android:textSize="20sp"
                     android:textStyle="italic" />
             </LinearLayout>

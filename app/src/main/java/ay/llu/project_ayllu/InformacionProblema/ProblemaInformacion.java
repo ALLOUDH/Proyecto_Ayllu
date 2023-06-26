@@ -75,6 +75,8 @@ public class ProblemaInformacion extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProblemaInformacion.this, ay.llu.project_ayllu.Grupos.class);
+                intent.putExtra("idproblema",idproblema);
+                intent.putExtra("tituloGrupo",titulo);
                 startActivity(intent);
             }
         });

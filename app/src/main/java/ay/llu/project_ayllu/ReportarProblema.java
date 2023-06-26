@@ -1,9 +1,6 @@
 package ay.llu.project_ayllu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,16 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.ktx.Firebase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
+
+import ay.llu.project_ayllu.ListasAdministrador.ReportarClass;
 
 public class ReportarProblema extends AppCompatActivity implements View.OnClickListener {
     EditText edt_descr;
+    TextView preguntasFrecuentes;
     Button btn_enviar;
     ImageView btn_wsp;
     FirebaseDatabase database;
@@ -31,11 +31,20 @@ public class ReportarProblema extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reportar_problema);
         edt_descr = findViewById(R.id.edtReportarProblema);
+        preguntasFrecuentes = findViewById(R.id.preguntasFrecuentes);
         btn_enviar = findViewById(R.id.btnEnviar);
         btn_wsp = findViewById(R.id.btn_wsp);
         btn_enviar.setOnClickListener(this);
         dbreference = FirebaseDatabase.getInstance().getReference();
         edt_descr.setTextColor(Color.WHITE);
+
+        preguntasFrecuentes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReportarProblema.this, PreguntasFrecuentes.class);
+                startActivity(intent);
+            }
+        });
 
         btn_wsp.setOnClickListener(new View.OnClickListener() {
             @Override

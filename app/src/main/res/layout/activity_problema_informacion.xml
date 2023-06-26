@@ -105,11 +105,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <VideoView
                     android:id="@+id/videoProblema"
                     android:layout_width="250dp"
                     android:layout_height="270dp"
-                    android:src="@drawable/play_icon2"/>
+                    android:src="@drawable/play_icon2" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -127,9 +129,9 @@
                     ></TextView>
                 <ImageView
                     android:id="@+id/imgUbicacionMostrarProblema"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:srcCompat="@drawable/maps_icon" />
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:srcCompat="@drawable/ic_maps" />
 
             </LinearLayout>
 

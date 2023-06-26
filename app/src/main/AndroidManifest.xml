@@ -12,6 +12,24 @@
         android:theme="@style/Theme.Project_Ayllu"
         tools:targetApi="31">
         <activity
+            android:name=".ListasAdministrador.PerfilInformacion"
+            android:exported="false" />
+        <activity
+            android:name=".ListasAdministrador.ListarPerfilesUsuarios"
+            android:exported="false" />
+        <activity
+            android:name=".ListasAdministrador.GrupoInformacion"
+            android:exported="false" />
+        <activity
+            android:name=".ListasAdministrador.ListarGrupos"
+            android:exported="false" />
+        <activity
+            android:name=".ListasAdministrador.ListarReportesClientes"
+            android:exported="false" />
+        <activity
+            android:name=".PreguntasFrecuentes"
+            android:exported="false" />
+        <activity
             android:name=".ListarProblemas.ListarProblemasValoradosAdministrdor"
             android:exported="false" />
         <activity

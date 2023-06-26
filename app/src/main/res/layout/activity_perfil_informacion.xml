@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_decolorated">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/top_background"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+            android:background="@drawable/logoalaternativo"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:text="Perfil de usuario"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            ></TextView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/btn_bg2"
+                    android:layout_margin="2dp"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/txtNombreMostrarPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginVertical="5dp"
+                        android:text="nombre"
+                        android:textColor="@color/purple_text"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/txtApellidoMostrarPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginVertical="5dp"
+                        android:text="apellido"
+                        android:textColor="@color/purple_text"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txtCelularMostrarPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="celular"
+                        android:textSize="15dp"
+                        android:layout_marginVertical="5dp"
+                        android:textColor="@color/purple_text"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/txtCarreraProfMostrarPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="carrera"
+                        android:textSize="15dp"
+                        android:layout_marginVertical="5dp"
+                        android:textColor="@color/purple_text"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/txtCorreoMostrarPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="correo"
+                        android:textSize="15dp"
+                        android:layout_marginVertical="5dp"
+                        android:textColor="@color/purple_text"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnEliminarPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_marginVertical="15dp"
+                    android:layout_marginHorizontal="70dp"
+                    android:background="@drawable/btn_bg"
+                    android:text="Eliminar perfil"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"></Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

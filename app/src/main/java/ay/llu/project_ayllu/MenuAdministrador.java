@@ -9,9 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import ay.llu.project_ayllu.ListarProblemas.ListarProblemasRecientesAdministrador;
 import ay.llu.project_ayllu.ListarProblemas.ListarProblemasValoradosAdministrdor;
+import ay.llu.project_ayllu.ListasAdministrador.ListarGrupos;
+import ay.llu.project_ayllu.ListasAdministrador.ListarPerfilesUsuarios;
+import ay.llu.project_ayllu.ListasAdministrador.ListarReportesClientes;
 
 public class MenuAdministrador extends AppCompatActivity {
-    ImageView imgcardProblemasRecientesAdministrador,imgcardProblemasValorados,imgcardPerfiles,imgcardGruposConformados;
+    ImageView imgcardProblemasRecientesAdministrador,imgcardProblemasValorados,imgcardPerfiles,imgcardGruposConformados,imgcardSoporteCliente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,7 @@ public class MenuAdministrador extends AppCompatActivity {
         imgcardProblemasValorados = findViewById(R.id.imgcardProblemasValorados);
         imgcardPerfiles = findViewById(R.id.imgcardPerfiles);
         imgcardGruposConformados = findViewById(R.id.imgcardGruposConformados);
+        imgcardSoporteCliente=findViewById(R.id.imgcardSoporteCliente);
 
         imgcardProblemasRecientesAdministrador.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,13 +43,22 @@ public class MenuAdministrador extends AppCompatActivity {
         imgcardPerfiles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MenuAdministrador.this, ListarPerfilesUsuarios.class);
+                startActivity(intent);
             }
         });
         imgcardGruposConformados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MenuAdministrador.this, ListarGrupos.class);
+                startActivity(intent);
+            }
+        });
+        imgcardSoporteCliente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuAdministrador.this, ListarReportesClientes.class);
+                startActivity(intent);
             }
         });
     }
