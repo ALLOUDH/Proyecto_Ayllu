@@ -1,7 +1,9 @@
+/*ESTE PROYECTO FUE REALIZADO POR:
+    Chávez Pérez Héctor
+    Muñico Tadeo Layoned
+    Soto Montes Jesús
+*/
 package ay.llu.project_ayllu;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +11,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

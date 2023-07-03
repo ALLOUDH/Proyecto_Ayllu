@@ -1,13 +1,16 @@
+/*ESTE PROYECTO FUE REALIZADO POR:
+    Chávez Pérez Héctor
+    Muñico Tadeo Layoned
+    Soto Montes Jesús
+*/
 package ay.llu.project_ayllu;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import ay.llu.project_ayllu.RecuperarContrasena.Ay_Contra_recup;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Ay_ayuda extends AppCompatActivity {
 

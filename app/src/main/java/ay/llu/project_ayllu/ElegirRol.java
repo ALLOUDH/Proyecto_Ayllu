@@ -1,3 +1,8 @@
+/*ESTE PROYECTO FUE REALIZADO POR:
+    Chávez Pérez Héctor
+    Muñico Tadeo Layoned
+    Soto Montes Jesús
+*/
 package ay.llu.project_ayllu;
 
 import android.content.Intent;
@@ -6,8 +11,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import ay.llu.project_ayllu.ListarProblemas.ListarProblemas;
 
 public class ElegirRol extends AppCompatActivity {
     ImageView imgcardUsuario,imgcardReportero,imgcardAdministrador;
