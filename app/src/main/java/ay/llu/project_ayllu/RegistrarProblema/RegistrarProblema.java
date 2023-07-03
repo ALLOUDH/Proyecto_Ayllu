@@ -127,9 +127,6 @@ public class RegistrarProblema extends AppCompatActivity {
         i.putExtra("idproblema",idproblema);
         i.putExtra("idcategoria",categ);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Toast.makeText(RegistrarProblema.this, idreportero, Toast.LENGTH_SHORT).show();
-        Toast.makeText(RegistrarProblema.this, idproblema, Toast.LENGTH_SHORT).show();
-        Toast.makeText(RegistrarProblema.this, categ, Toast.LENGTH_SHORT).show();
         startActivity(i);
         edtTituloRegistrarProblema.setText("");
         edtDescripcionRegistrarProblema.setText("");
