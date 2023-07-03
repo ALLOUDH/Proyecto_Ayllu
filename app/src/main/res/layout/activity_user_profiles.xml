@@ -74,33 +74,59 @@
                         app:layout_constraintTop_toTopOf="@+id/imageView11"
                         app:srcCompat="@drawable/profile" />
 
-                    <ImageView
-                        android:id="@+id/imageView13"
-                        android:layout_width="35dp"
-                        android:layout_height="60dp"
-                        android:layout_marginEnd="16dp"
-                        android:src="@drawable/exclamation_icon"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.764"
-                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView5"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ALAN BRITO DELGADO"
+                android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="#581f5f"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Nombre"
+                    android:textColor="@color/purple_text"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/textApellido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20sp"
+                    android:text="Apellido"
+                    android:textColor="@color/purple_text"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textCarrera"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:text="Ingeniería de sistemas"
+                android:textAlignment="center"
+                android:textColor="#784B80"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correo"
+                android:textAlignment="center"
+                android:textColor="#784B80"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textCelular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Celular"
                 android:textAlignment="center"
                 android:textColor="#784B80"
                 android:textSize="15sp"

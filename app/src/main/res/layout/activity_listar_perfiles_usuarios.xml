@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:background="@drawable/top_background"
-        android:gravity="center"
+        android:gravity="center|top"
         android:orientation="vertical">
 
         <ImageView
@@ -21,6 +21,14 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Perfiles de usuario"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            ></TextView>
     </LinearLayout>
 
     <LinearLayout
@@ -30,15 +38,14 @@
         android:layout_marginBottom="10dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <SearchView
+            android:id="@+id/txtBuscarUsuario"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-
-            android:text="Perfiles de usuario"
+            android:background="@drawable/btn_bg2"
             android:textColor="@color/purple_text"
             android:textSize="25dp"
-            ></TextView>
+            ></SearchView>
 
     </LinearLayout>
 
