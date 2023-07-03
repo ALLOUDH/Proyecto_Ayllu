@@ -14,7 +14,7 @@ import ay.llu.project_ayllu.ListasAdministrador.ListarPerfilesUsuarios;
 import ay.llu.project_ayllu.ListasAdministrador.ListarReportesClientes;
 
 public class MenuAdministrador extends AppCompatActivity {
-    ImageView imgcardProblemasRecientesAdministrador,imgcardProblemasValorados,imgcardPerfiles,imgcardGruposConformados,imgcardSoporteCliente;
+    ImageView imgcardProblemasRecientesAdministrador,imgcardProblemasValorados,imgcardPerfiles,imgcardGruposConformados,imgcardSoporteCliente,imgcardWebScraping;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,7 @@ public class MenuAdministrador extends AppCompatActivity {
         imgcardPerfiles = findViewById(R.id.imgcardPerfiles);
         imgcardGruposConformados = findViewById(R.id.imgcardGruposConformados);
         imgcardSoporteCliente=findViewById(R.id.imgcardSoporteCliente);
+        imgcardWebScraping = findViewById(R.id.imgcardWebScraping);
 
         imgcardProblemasRecientesAdministrador.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +59,13 @@ public class MenuAdministrador extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuAdministrador.this, ListarReportesClientes.class);
+                startActivity(intent);
+            }
+        });
+        imgcardWebScraping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuAdministrador.this, WebScrapping.class);
                 startActivity(intent);
             }
         });

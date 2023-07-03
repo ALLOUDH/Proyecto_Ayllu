@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Project_Ayllu"
         tools:targetApi="31">
         <activity
+            android:name=".WebScrapping"
+            android:exported="false" />
+        <activity
             android:name=".ListasAdministrador.PerfilInformacion"
             android:exported="false" />
         <activity

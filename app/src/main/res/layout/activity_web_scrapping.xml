@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_decolorated"
+    tools:context=".WebScrapping">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/top_background"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="194dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/logoalaternativo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:text="Reportar por Web Scraping"
+            android:textColor="@color/white"
+            android:textSize="23dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edt_buscar_problema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese un tema a buscar"
+            android:background="@drawable/edt_line"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:textColorHint="@color/purple_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_problema_wbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_titulo_wbs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Titulo del Problema"
+            android:textColor="@color/purple_text"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"/>
+
+        <ImageView
+            android:id="@+id/img_problema_wbs"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/img"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/txt_descripcion_wbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción del Problema"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/purple_text"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <Button
+            android:id="@+id/btn_buscar_wbs"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/white"
+            android:text="Buscar"
+            android:textSize="18dp"
+            android:layout_marginRight="20dp"
+            android:onClick="call_buscar"/>
+        <Button
+            android:id="@+id/btn_registrar_wbs"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/white"
+            android:text="Registrar"
+            android:textSize="18dp"
+            android:onClick="call_registrar"/>
+    </LinearLayout>
+
+</LinearLayout>
