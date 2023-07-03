@@ -2,6 +2,7 @@ package ay.llu.project_ayllu.ListarProblemas;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 import ay.llu.project_ayllu.InformacionProblema.ProblemaInformacionAdministrador;
 import ay.llu.project_ayllu.R;
@@ -21,8 +23,9 @@ import ay.llu.project_ayllu.RegistrarProblema.ProblemaClase;
 
 public class ProblemaAdapterAdministradorR extends ArrayAdapter<ProblemaClase> {
     private List<ProblemaClase> listProblema;
-
+    private List<ProblemaClase> listOriginal;
     private List<String> textList;
+    private List<String> textListEstado;
     private Context pcontext;
     private int resourcelayaout;
 
@@ -31,6 +34,9 @@ public class ProblemaAdapterAdministradorR extends ArrayAdapter<ProblemaClase> {
         this.listProblema = objects;
         this.pcontext = context;
         this.resourcelayaout = resource;
+
+        listOriginal = new ArrayList<>();
+        listOriginal.addAll(listProblema);
     }
     @NonNull
     @Override
@@ -48,19 +54,28 @@ public class ProblemaAdapterAdministradorR extends ArrayAdapter<ProblemaClase> {
         int index = random.nextInt(textList.size());
         String prioridad = textList.get(index);
 
+        textListEstado = new ArrayList<String>();
+        textListEstado.add("Pendiente");
+        textListEstado.add("En progreso..");
+        Random randomE = new Random();
+        int i = randomE.nextInt(textListEstado.size());
+        String estado = textListEstado.get(i);
+
         ProblemaClase problema = listProblema.get(position);
 
-        TextView txtTitulo,txtDescripcion,txtFecha,txtPrioridad;
+        TextView txtTitulo,txtDescripcion,txtFecha,txtPrioridad,txtEstado;
 
         txtTitulo = view.findViewById(R.id.txtTitulo);
         txtDescripcion = view.findViewById(R.id.txtDescripcion);
         txtFecha = view.findViewById(R.id.txtFecha);
         txtPrioridad = view.findViewById(R.id.txtPrioridad);
+        txtEstado = view.findViewById(R.id.txtEstado);
 
         txtTitulo.setText(problema.getTitulo());
         txtDescripcion.setText(problema.getDescripcion());
         txtFecha.setText(problema.getFecha());
         txtPrioridad.setText(prioridad);
+        txtEstado.setText(estado);
 
         String idreportero = problema.getIdReportero();
         String idproblema = problema.getId();
@@ -90,4 +105,25 @@ public class ProblemaAdapterAdministradorR extends ArrayAdapter<ProblemaClase> {
         });
         return view;
     }
+
+    public void filtrado(String txtBuscar){
+        int longitud = txtBuscar.length();
+        if(longitud==0){
+            listProblema.clear();
+            listProblema.addAll(listOriginal);
+        }else{
+            if(Build.VERSION.SDK_INT >=Build.VERSION_CODES.N){
+                List<ProblemaClase>coleccion = listProblema.stream().filter(i -> i.getTitulo().toLowerCase().contains(txtBuscar.toLowerCase())).collect(Collectors.toList());
+                listProblema.clear();
+                listProblema.addAll(coleccion);
+            }else{
+                for(ProblemaClase d: listOriginal){
+                    if(d.getTitulo().toLowerCase().contains(txtBuscar.toLowerCase())){
+                        listProblema.add(d);
+                    }
+                }//for
+            }//else
+        }//else
+        notifyDataSetChanged();
+    }//filtrado
 }

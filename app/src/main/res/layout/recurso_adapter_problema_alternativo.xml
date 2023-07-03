@@ -43,7 +43,7 @@
             android:background="@drawable/bg_cuadros"
             android:layout_margin="2dp"
             android:paddingRight="5dp"
-            android:paddingLeft="15dp">
+            android:paddingLeft="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -52,7 +52,7 @@
 
                 <TextView
                     android:id="@+id/txtTitulo"
-                    android:layout_width="160dp"
+                    android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:text="titulo"
@@ -64,20 +64,39 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_height="wrap_content"
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:id="@+id/imageView2"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_start" />
-                    <ImageView
                         android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/imageView2"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_start" />
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/imageView3"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_start" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtEstado"
+                        android:text="estado"
+                        android:layout_gravity="right"
                         android:layout_width="wrap_content"
-                        android:id="@+id/imageView3"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_start" />
+                        android:layout_height="wrap_content"
+                        android:textSize="10dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -85,7 +104,6 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -112,6 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="Descripcion"
+                android:justificationMode="inter_word"
                 android:textSize="12dp"
                 android:textColor="@color/white"/>
 

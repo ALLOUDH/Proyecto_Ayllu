@@ -19,14 +19,15 @@
             android:layout_height="50dp"
             android:background="@drawable/logoalaternativo"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="5dp"
             ></ImageView>
         <TextView
             android:id="@+id/txtTituloMostrarProblema"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-
+            android:gravity="center"
+            android:layout_gravity="center"
             android:text="TituloProblema"
             android:textColor="@color/white"
             android:textSize="23dp"
@@ -114,6 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="descripción"
+                    android:justificationMode="inter_word"
                     android:textColor="@color/purple_text"
                     android:textSize="18dp"
                     ></TextView>

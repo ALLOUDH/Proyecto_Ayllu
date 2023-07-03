@@ -3,6 +3,7 @@ package ay.llu.project_ayllu.ListarProblemas;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,9 +23,11 @@ import java.util.List;
 import ay.llu.project_ayllu.R;
 import ay.llu.project_ayllu.RegistrarProblema.ProblemaClase;
 
-public class ListarProblemasRecientesAdministrador extends AppCompatActivity {
+public class ListarProblemasRecientesAdministrador extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     ListView lstProblemasAdministrador;
+
+    SearchView txtBuscarProblema;
     List<ProblemaClase> listaProblemas = new ArrayList<ProblemaClase>();
     ArrayAdapter<ProblemaClase> arrayAdapterProblemas;
     ProblemaAdapterAdministradorR problemaAdapterA;
@@ -37,9 +40,13 @@ public class ListarProblemasRecientesAdministrador extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_problemas_recientes_administrador);
 
+        txtBuscarProblema = findViewById(R.id.txtBuscarProblema);
+
         FirebaseApp.initializeApp(this);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         AylluDatabase = database.getReference();
+
+        txtBuscarProblema.setOnQueryTextListener(this);
 
         lstProblemasAdministrador = findViewById(R.id.lstProblemasUsuarioAdministrador);
         listarProblemas();
@@ -67,5 +74,16 @@ public class ListarProblemasRecientesAdministrador extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        problemaAdapterA.filtrado(s);
+        return false;
     }
 }

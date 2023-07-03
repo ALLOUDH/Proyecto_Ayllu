@@ -57,7 +57,6 @@ public class loginReportero extends AppCompatActivity {
                                     Intent i = new Intent(loginReportero.this, MenuReportero.class);
                                     String idreportero = dni;
                                     i.putExtra("dnireportero", idreportero);
-                                    Toast.makeText(loginReportero.this, idreportero, Toast.LENGTH_SHORT).show();
                                     Toast.makeText(loginReportero.this,"Bienvenido!!",Toast.LENGTH_SHORT).show();
                                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(i);
