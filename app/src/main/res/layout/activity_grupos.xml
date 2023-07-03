@@ -40,15 +40,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/btnReport"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:onClick="llamarReportar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/exclamation_icon" />
-
 
 
     <FrameLayout

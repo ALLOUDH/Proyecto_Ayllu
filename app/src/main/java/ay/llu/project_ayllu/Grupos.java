@@ -1,3 +1,8 @@
+/*ESTE PROYECTO FUE REALIZADO POR:
+    Chávez Pérez Héctor
+    Muñico Tadeo Layoned
+    Soto Montes Jesús
+*/
 package ay.llu.project_ayllu;
 
 import android.content.Intent;
@@ -96,6 +101,7 @@ public class Grupos extends AppCompatActivity {
         String idproblem = idproblema;
         i.putExtra("idgrupo",idgrupo);
         i.putExtra("idproblema",idproblem);
+        i.putExtra("tituloGrupo",titulo);
         i.putExtra("idusuario",iduser);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);

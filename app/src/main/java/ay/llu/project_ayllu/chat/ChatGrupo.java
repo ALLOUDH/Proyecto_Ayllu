@@ -1,13 +1,11 @@
+/*ESTE PROYECTO FUE REALIZADO POR:
+    Chávez Pérez Héctor
+    Muñico Tadeo Layoned
+    Soto Montes Jesús
+*/
+
 package ay.llu.project_ayllu.chat;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -15,11 +13,17 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.ChildEventListener;
@@ -33,7 +37,6 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import ay.llu.project_ayllu.Grupos;
-import ay.llu.project_ayllu.ListarProblemas.ListarProblemas;
 import ay.llu.project_ayllu.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -41,7 +44,7 @@ public class ChatGrupo extends AppCompatActivity {
 
 
     ImageView imgbtn_call,imgbtn_navigation;
-    TextView txtv_nombreproblema;
+    TextView txtTituloProblemaChat;
     private CircleImageView civ_fotouser;
     private TextView txtv_nombreuser;
     private RecyclerView rv_mensajes;
@@ -61,8 +64,8 @@ public class ChatGrupo extends AppCompatActivity {
         setContentView(R.layout.activity_chat_grupo);
         civ_fotouser = (CircleImageView) findViewById(R.id.civ_fotouserCG);
         txtv_nombreuser = (TextView) findViewById(R.id.txtv_nombreuserCG);
-        txtv_nombreproblema = (TextView) findViewById(R.id.txtv_nombre_grupoproblemaCG);
         rv_mensajes = (RecyclerView) findViewById(R.id.rv_texto_CG);
+        txtTituloProblemaChat = findViewById(R.id.txtTituloProblemaChat);
         edt_escribirmensajes = (EditText) findViewById(R.id.edt_escribirmensajeCG);
         imgbtn_enviarmensajes = (ImageView) findViewById(R.id.imgbtn_enviarmensajeCG);
         imgbtn_enviarimagenes = (ImageView) findViewById(R.id.imgbtn_enviarfotosCG);
@@ -70,10 +73,13 @@ public class ChatGrupo extends AppCompatActivity {
         imgbtn_navigation = (ImageView) findViewById(R.id.imgbtn_settings_GC);
         edt_escribirmensajes.setTextColor(getColor(R.color.white));
 
+        String titulo= getIntent().getExtras().getString("tituloGrupo");
+
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("chat");// Sala de chat (nombre)
         storage = FirebaseStorage.getInstance();
 
+        txtTituloProblemaChat.setText(titulo);
         adapter = new AdaptadorMensajes(this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv_mensajes.setLayoutManager(linearLayoutManager);

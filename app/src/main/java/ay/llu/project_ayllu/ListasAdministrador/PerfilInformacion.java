@@ -1,3 +1,8 @@
+/*ESTE PROYECTO FUE REALIZADO POR:
+    Chávez Pérez Héctor
+    Muñico Tadeo Layoned
+    Soto Montes Jesús
+*/
 package ay.llu.project_ayllu.ListasAdministrador;
 
 import android.app.AlertDialog;
@@ -20,12 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import ay.llu.project_ayllu.ElegirRol;
-import ay.llu.project_ayllu.InformacionProblema.ProblemaInformacionAdministrador;
-import ay.llu.project_ayllu.ListarProblemas.ListarProblemasRecientesAdministrador;
 import ay.llu.project_ayllu.R;
-import ay.llu.project_ayllu.UserAccount;
-import ay.llu.project_ayllu.Usuario;
 
 public class PerfilInformacion extends AppCompatActivity {
     TextView txtNombreMostrarPerfil,txtApellidoMostrarPerfil,txtCelularMostrarPerfil,

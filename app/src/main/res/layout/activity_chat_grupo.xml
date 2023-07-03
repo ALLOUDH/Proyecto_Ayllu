@@ -10,78 +10,35 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/top_background"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="230dp"
+        android:background="@drawable/top_background"
+        android:gravity="center|top"
+        android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtv_chat_general"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="134dp"
-                android:gravity="center"
-                android:text="Chat General"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-            <TextView
-                android:id="@+id/txtv_proyectochat"
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="44dp"
-                android:gravity="left"
-                android:text="Proyecto:"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.063"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtv_chat_general"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <TextView
-                android:id="@+id/txtv_nombre_grupoproblemaCG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="44dp"
-                android:gravity="left"
-                android:text="Saneamiento en Siglo XX"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.362"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtv_proyectochat"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <ImageView
-                android:layout_width="367dp"
-                android:layout_height="181dp"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/logo_ayllu"
-                app:layout_constraintBottom_toTopOf="@+id/txtv_nombre_grupoproblemaCG"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="194dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/logoalaternativo"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Chat general"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/txtTituloProblemaChat"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="TituloProblemaChat"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            ></TextView>
     </LinearLayout>
 
     <LinearLayout

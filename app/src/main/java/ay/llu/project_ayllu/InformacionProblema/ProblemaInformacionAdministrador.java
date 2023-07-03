@@ -1,3 +1,8 @@
+/*ESTE PROYECTO FUE REALIZADO POR:
+    Chávez Pérez Héctor
+    Muñico Tadeo Layoned
+    Soto Montes Jesús
+*/
 package ay.llu.project_ayllu.InformacionProblema;
 
 import android.app.AlertDialog;
@@ -22,10 +27,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import ay.llu.project_ayllu.ElegirRol;
 import ay.llu.project_ayllu.ListarProblemas.ListarProblemasRecientesAdministrador;
 import ay.llu.project_ayllu.R;
-import ay.llu.project_ayllu.UserAccount;
 
 public class ProblemaInformacionAdministrador extends AppCompatActivity {
     TextView txtTituloMostrarProblema,txtFechaMostrarProblema,txtDescripcionMostrarProblema,txtUbicacionMostrarProblema;

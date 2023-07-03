@@ -1,7 +1,11 @@
+/*ESTE PROYECTO FUE REALIZADO POR:
+    Chávez Pérez Héctor
+    Muñico Tadeo Layoned
+    Soto Montes Jesús
+*/
 package ay.llu.project_ayllu.ListasAdministrador;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +17,6 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-import ay.llu.project_ayllu.InformacionProblema.ProblemaInformacion;
 import ay.llu.project_ayllu.R;
 
 public class ReporteClienteAdapter extends ArrayAdapter<ReportarClass> {
@@ -50,12 +53,7 @@ public class ReporteClienteAdapter extends ArrayAdapter<ReportarClass> {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(view.getContext(), ProblemaInformacion.class);
-                i.putExtra("descripcionreporte",descripcionReporte);
-                // i.putExtra("titulo",problema.getFecha());
-                //Toast.makeText(ProblemaAdapter.this.getContext(), fecha, Toast.LENGTH_SHORT).show();
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                view.getContext().startActivity(i);
+
             }
 
         });

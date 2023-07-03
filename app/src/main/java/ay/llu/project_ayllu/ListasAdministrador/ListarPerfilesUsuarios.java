@@ -1,8 +1,14 @@
+/*ESTE PROYECTO FUE REALIZADO POR:
+    Chávez Pérez Héctor
+    Muñico Tadeo Layoned
+    Soto Montes Jesús
+*/
 package ay.llu.project_ayllu.ListasAdministrador;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,9 +28,11 @@ import java.util.List;
 import ay.llu.project_ayllu.R;
 import ay.llu.project_ayllu.Usuario;
 
-public class ListarPerfilesUsuarios extends AppCompatActivity {
+public class ListarPerfilesUsuarios extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     ListView lstPerfilesUsuarios;
+
+    SearchView txtBuscarUsuario;
     List<Usuario> listaPerfiles = new ArrayList<Usuario>();
     ArrayAdapter<Usuario> arrayAdapterPerfiles;
     PerfilesUsuariosAdapter perfilesAdapter;
@@ -37,9 +45,13 @@ public class ListarPerfilesUsuarios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_perfiles_usuarios);
 
+        txtBuscarUsuario = findViewById(R.id.txtBuscarUsuario);
+
         FirebaseApp.initializeApp(this);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         AylluDatabase = database.getReference();
+
+        txtBuscarUsuario.setOnQueryTextListener(this);
 
         lstPerfilesUsuarios = findViewById(R.id.lstPerfilesUsuarios);
         listarPerfiles();
@@ -67,5 +79,16 @@ public class ListarPerfilesUsuarios extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        perfilesAdapter.filtrado(s);
+        return false;
     }
 }
