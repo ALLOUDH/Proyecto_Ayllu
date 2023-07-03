@@ -117,6 +117,7 @@ public class UserAccount extends AppCompatActivity {
 
     private void actualizar_datos_UA(){
         Usuario usuario = new Usuario();
+        usuario.setIduser(iduser);
         usuario.setNombre(txtvNombreUA.getText().toString().trim());
         usuario.setApellido(txtvApellidoUA.getText().toString());
         usuario.setCarreraprof(txtvCarreraUA.getText().toString());

@@ -173,7 +173,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
     private void registrarUsuario(String id, String nombreUser, String apellidoUser, String correoUser, String numeroCeluUser,String carreraUser,String contraUser) {
 
-                    Usuario usuario = new Usuario(nombreUser,apellidoUser,correoUser,numeroCeluUser,carreraUser);
+                    Usuario usuario = new Usuario(id,nombreUser,apellidoUser,correoUser,numeroCeluUser,carreraUser);
                     Ayllu.child("Usuarios").child(id).setValue(usuario);
     }
 }
