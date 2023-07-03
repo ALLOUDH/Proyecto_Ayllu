@@ -44,7 +44,7 @@ public class ChatGrupo extends AppCompatActivity {
 
 
     ImageView imgbtn_call,imgbtn_navigation;
-    TextView txtv_nombreproblema;
+    TextView txtTituloProblemaChat;
     private CircleImageView civ_fotouser;
     private TextView txtv_nombreuser;
     private RecyclerView rv_mensajes;
@@ -64,8 +64,8 @@ public class ChatGrupo extends AppCompatActivity {
         setContentView(R.layout.activity_chat_grupo);
         civ_fotouser = (CircleImageView) findViewById(R.id.civ_fotouserCG);
         txtv_nombreuser = (TextView) findViewById(R.id.txtv_nombreuserCG);
-        txtv_nombreproblema = (TextView) findViewById(R.id.txtv_nombre_grupoproblemaCG);
         rv_mensajes = (RecyclerView) findViewById(R.id.rv_texto_CG);
+        txtTituloProblemaChat = findViewById(R.id.txtTituloProblemaChat);
         edt_escribirmensajes = (EditText) findViewById(R.id.edt_escribirmensajeCG);
         imgbtn_enviarmensajes = (ImageView) findViewById(R.id.imgbtn_enviarmensajeCG);
         imgbtn_enviarimagenes = (ImageView) findViewById(R.id.imgbtn_enviarfotosCG);
@@ -73,10 +73,13 @@ public class ChatGrupo extends AppCompatActivity {
         imgbtn_navigation = (ImageView) findViewById(R.id.imgbtn_settings_GC);
         edt_escribirmensajes.setTextColor(getColor(R.color.white));
 
+        String titulo= getIntent().getExtras().getString("tituloGrupo");
+
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("chat");// Sala de chat (nombre)
         storage = FirebaseStorage.getInstance();
 
+        txtTituloProblemaChat.setText(titulo);
         adapter = new AdaptadorMensajes(this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv_mensajes.setLayoutManager(linearLayoutManager);
